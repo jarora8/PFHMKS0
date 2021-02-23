@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XaUnitResult resultType="SUCCESS" containsSimulation="false">
+  <ExecutionId>6dd894f2-4686-4da9-96ac-32ea71a386a4</ExecutionId>
+  <Message />
+  <AST>
+    <XaUnit xmlns="http://www.xact.dk/xatester/v/1" xmlns:data="http://www.xact.dk/xatester/data/v/1">
+      <Test>
+        <ReadRemoteFile fileName="HDDRXM0.DEMO.TTTFT.CWXTRPT.EXPECT.ORIG" id="rptFileDet" label="rptFileDet" firstRecord="10" numberRecords="22" mDataDefinitionName="rptempdet">
+          <Records>
+            <Record>
+              <employee-dtl>
+                <filler1 />
+                <emp-dtl-name>JOHN SMITH</emp-dtl-name>
+                <filler2 />
+                <emp-dtl-region>NORTH</emp-dtl-region>
+                <filler3 />
+                <emp-dtl-type>H</emp-dtl-type>
+                <filler4 />
+                <emp-dtl-hire-mm>10</emp-dtl-hire-mm>
+                <emp-dtl-slash1>/</emp-dtl-slash1>
+                <emp-dtl-hire-dd>15</emp-dtl-hire-dd>
+                <emp-dtl-slash2>/</emp-dtl-slash2>
+                <emp-dtl-hire-yy>81</emp-dtl-hire-yy>
+                <filler5 />
+                <emp-dtl-yrs-of-service>37</emp-dtl-yrs-of-service>
+                <filler6 />
+                <emp-dtl-wages>1083.00</emp-dtl-wages>
+                <filler7 />
+                <emp-dtl-ot>0.00</emp-dtl-ot>
+                <filler8 />
+                <emp-dtl-comm>0.00</emp-dtl-comm>
+                <filler9 />
+                <emp-dtl-total>1083.00</emp-dtl-total>
+              </employee-dtl>
+            </Record>
+            <Record>
+              <employee-dtl>
+                <filler1 />
+                <emp-dtl-name>ROY GARDNER</emp-dtl-name>
+                <filler2 />
+                <emp-dtl-region>NORTH</emp-dtl-region>
+                <filler3 />
+                <emp-dtl-type>S</emp-dtl-type>
+                <filler4 />
+                <emp-dtl-hire-mm>12</emp-dtl-hire-mm>
+                <emp-dtl-slash1>/</emp-dtl-slash1>
+                <emp-dtl-hire-dd>31</emp-dtl-hire-dd>
+                <emp-dtl-slash2>/</emp-dtl-slash2>
+                <emp-dtl-hire-yy>92</emp-dtl-hire-yy>
+                <filler5 />
+                <emp-dtl-yrs-of-service>26</emp-dtl-yrs-of-service>
+                <filler6 />
+                <emp-dtl-wages>750.00</emp-dtl-wages>
+                <filler7 />
+                <emp-dtl-ot>0.00</emp-dtl-ot>
+                <filler8 />
+                <emp-dtl-comm>3300.00</emp-dtl-comm>
+                <filler9 />
+                <emp-dtl-total>4050.00</emp-dtl-total>
+              </employee-dtl>
+            </Record>
+            <Record>
+              <employee-dtl>
+                <filler1 />
+                <emp-dtl-name>DAN PEARSON</emp-dtl-name>
+                <filler2 />
+                <emp-dtl-region>NORTH</emp-dtl-region>
+                <filler3 />
+                <emp-dtl-type>S</emp-dtl-type>
+                <filler4 />
+                <emp-dtl-hire-mm>7</emp-dtl-hire-mm>
+                <emp-dtl-slash1>/</emp-dtl-slash1>
+                <emp-dtl-hire-dd>20</emp-dtl-hire-dd>
+                <emp-dtl-slash2>/</emp-dtl-slash2>
+                <emp-dtl-hire-yy>89</emp-dtl-hire-yy>
+                <filler5 />
+                <emp-dtl-yrs-of-service>30</emp-dtl-yrs-of-service>
+                <filler6 />
+                <emp-dtl-wages>850.00</emp-dtl-wages>
+                <filler7 />
+                <emp-dtl-ot>0.00</emp-dtl-ot>
+                <filler8 />
+                <emp-dtl-comm>1000.00</emp-dtl-comm>
+                <filler9 />
+                <emp-dtl-total>1850.00</emp-dtl-total>
+              </employee-dtl>
+            </Record>
+            <Record>
+              <employee-dtl>
+                <filler1 />
+                <emp-dtl-name>MICHAEL DAYTON</emp-dtl-name>
+                <filler2 />
+                <emp-dtl-region>SOUTH</emp-dtl-region>
+                <filler3 />
+                <emp-dtl-type>S</emp-dtl-type>
+                <filler4 />
+                <emp-dtl-hire-mm>8</emp-dtl-hire-mm>
+                <emp-dtl-slash1>/</emp-dtl-slash1>
+                <emp-dtl-hire-dd>30</emp-dtl-hire-dd>
+                <emp-dtl-slash2>/</emp-dtl-slash2>
+                <emp-dtl-hire-yy>82</emp-dtl-hire-yy>
+                <filler5 />
+                <emp-dtl-yrs-of-service>37</emp-dtl-yrs-of-service>
+                <filler6 />
+                <emp-dtl-wages>825.00</emp-dtl-wages>
+                <filler7 />
+                <emp-dtl-ot>0.00</emp-dtl-ot>
+                <filler8 />
+                <emp-dtl-comm>6000.00</emp-dtl-comm>
+                <filler9 />
+                <emp-dtl-total>6825.00</emp-dtl-total>
+              </employee-dtl>
+            </Record>
+            <Record>
+              <employee-dtl>
+                <filler1 />
+                <emp-dtl-name>DENNIS WHITE</emp-dtl-name>
+                <filler2 />
+                <emp-dtl-region>SOUTH</emp-dtl-region>
+                <filler3 />
+                <emp-dtl-type>S</emp-dtl-type>
+                <filler4 />
+                <emp-dtl-hire-mm>2</emp-dtl-hire-mm>
+                <emp-dtl-slash1>/</emp-dtl-slash1>
+                <emp-dtl-hire-dd>29</emp-dtl-hire-dd>
+                <emp-dtl-slash2>/</emp-dtl-slash2>
+                <emp-dtl-hire-yy>88</emp-dtl-hire-yy>
+                <filler5 />
+                <emp-dtl-yrs-of-service>31</emp-dtl-yrs-of-service>
+                <filler6 />
+                <emp-dtl-wages>1050.00</emp-dtl-wages>
+                <filler7 />
+                <emp-dtl-ot>0.00</emp-dtl-ot>
+                <filler8 />
+                <emp-dtl-comm>1120.00</emp-dtl-comm>
+                <filler9 />
+                <emp-dtl-total>2170.00</emp-dtl-total>
+              </employee-dtl>
+            </Record>
+            <Record>
+              <employee-dtl>
+                <filler1 />
+                <emp-dtl-name>VALERIE OLSEN</emp-dtl-name>
+                <filler2 />
+                <emp-dtl-region>EAST</emp-dtl-region>
+                <filler3 />
+                <emp-dtl-type>S</emp-dtl-type>
+                <filler4 />
+                <emp-dtl-hire-mm>5</emp-dtl-hire-mm>
+                <emp-dtl-slash1>/</emp-dtl-slash1>
+                <emp-dtl-hire-dd>1</emp-dtl-hire-dd>
+                <emp-dtl-slash2>/</emp-dtl-slash2>
+                <emp-dtl-hire-yy>94</emp-dtl-hire-yy>
+                <filler5 />
+                <emp-dtl-yrs-of-service>25</emp-dtl-yrs-of-service>
+                <filler6 />
+                <emp-dtl-wages>900.00</emp-dtl-wages>
+                <filler7 />
+                <emp-dtl-ot>0.00</emp-dtl-ot>
+                <filler8 />
+                <emp-dtl-comm>5600.00</emp-dtl-comm>
+                <filler9 />
+                <emp-dtl-total>6500.00</emp-dtl-total>
+              </employee-dtl>
+            </Record>
+            <Record>
+              <employee-dtl>
+                <filler1 />
+                <emp-dtl-name>LAURA MARTIN</emp-dtl-name>
+                <filler2 />
+                <emp-dtl-region>EAST</emp-dtl-region>
+                <filler3 />
+                <emp-dtl-type>S</emp-dtl-type>
+                <filler4 />
+                <emp-dtl-hire-mm>6</emp-dtl-hire-mm>
+                <emp-dtl-slash1>/</emp-dtl-slash1>
+                <emp-dtl-hire-dd>14</emp-dtl-hire-dd>
+                <emp-dtl-slash2>/</emp-dtl-slash2>
+                <emp-dtl-hire-yy>83</emp-dtl-hire-yy>
+                <filler5 />
+                <emp-dtl-yrs-of-service>36</emp-dtl-yrs-of-service>
+                <filler6 />
+                <emp-dtl-wages>1225.00</emp-dtl-wages>
+                <filler7 />
+                <emp-dtl-ot>0.00</emp-dtl-ot>
+                <filler8 />
+                <emp-dtl-comm>6000.00</emp-dtl-comm>
+                <filler9 />
+                <emp-dtl-total>7225.00</emp-dtl-total>
+              </employee-dtl>
+            </Record>
+            <Record>
+              <employee-dtl>
+                <filler1 />
+                <emp-dtl-name>MARCIA SULLIVAN</emp-dtl-name>
+                <filler2 />
+                <emp-dtl-region>EAST</emp-dtl-region>
+                <filler3 />
+                <emp-dtl-type>H</emp-dtl-type>
+                <filler4 />
+                <emp-dtl-hire-mm>4</emp-dtl-hire-mm>
+                <emp-dtl-slash1>/</emp-dtl-slash1>
+                <emp-dtl-hire-dd>5</emp-dtl-hire-dd>
+                <emp-dtl-slash2>/</emp-dtl-slash2>
+                <emp-dtl-hire-yy>93</emp-dtl-hire-yy>
+                <filler5 />
+                <emp-dtl-yrs-of-service>26</emp-dtl-yrs-of-service>
+                <filler6 />
+                <emp-dtl-wages>1200.00</emp-dtl-wages>
+                <filler7 />
+                <emp-dtl-ot>180.00</emp-dtl-ot>
+                <filler8 />
+                <emp-dtl-comm>0.00</emp-dtl-comm>
+                <filler9 />
+                <emp-dtl-total>1380.00</emp-dtl-total>
+              </employee-dtl>
+            </Record>
+            <Record>
+              <employee-dtl>
+                <filler1 />
+                <emp-dtl-name>JAMES MORRISON</emp-dtl-name>
+                <filler2 />
+                <emp-dtl-region>EAST</emp-dtl-region>
+                <filler3 />
+                <emp-dtl-type>H</emp-dtl-type>
+                <filler4 />
+                <emp-dtl-hire-mm>9</emp-dtl-hire-mm>
+                <emp-dtl-slash1>/</emp-dtl-slash1>
+                <emp-dtl-hire-dd>13</emp-dtl-hire-dd>
+                <emp-dtl-slash2>/</emp-dtl-slash2>
+                <emp-dtl-hire-yy>91</emp-dtl-hire-yy>
+                <filler5 />
+                <emp-dtl-yrs-of-service>27</emp-dtl-yrs-of-service>
+                <filler6 />
+                <emp-dtl-wages>1017.50</emp-dtl-wages>
+                <filler7 />
+                <emp-dtl-ot>0.00</emp-dtl-ot>
+                <filler8 />
+                <emp-dtl-comm>0.00</emp-dtl-comm>
+                <filler9 />
+                <emp-dtl-total>1017.50</emp-dtl-total>
+              </employee-dtl>
+            </Record>
+            <Record>
+              <employee-dtl>
+                <filler1 />
+                <emp-dtl-name>THOMAS LONG</emp-dtl-name>
+                <filler2 />
+                <emp-dtl-region>WEST</emp-dtl-region>
+                <filler3 />
+                <emp-dtl-type>H</emp-dtl-type>
+                <filler4 />
+                <emp-dtl-hire-mm>3</emp-dtl-hire-mm>
+                <emp-dtl-slash1>/</emp-dtl-slash1>
+                <emp-dtl-hire-dd>31</emp-dtl-hire-dd>
+                <emp-dtl-slash2>/</emp-dtl-slash2>
+                <emp-dtl-hire-yy>87</emp-dtl-hire-yy>
+                <filler5 />
+                <emp-dtl-yrs-of-service>32</emp-dtl-yrs-of-service>
+                <filler6 />
+                <emp-dtl-wages>1000.00</emp-dtl-wages>
+                <filler7 />
+                <emp-dtl-ot>0.00</emp-dtl-ot>
+                <filler8 />
+                <emp-dtl-comm>0.00</emp-dtl-comm>
+                <filler9 />
+                <emp-dtl-total>1000.00</emp-dtl-total>
+              </employee-dtl>
+            </Record>
+            <Record>
+              <employee-dtl>
+                <filler1 />
+                <emp-dtl-name>DONNA BROWN</emp-dtl-name>
+                <filler2 />
+                <emp-dtl-region>WEST</emp-dtl-region>
+                <filler3 />
+                <emp-dtl-type>S</emp-dtl-type>
+                <filler4 />
+                <emp-dtl-hire-mm>11</emp-dtl-hire-mm>
+                <emp-dtl-slash1>/</emp-dtl-slash1>
+                <emp-dtl-hire-dd>11</emp-dtl-hire-dd>
+                <emp-dtl-slash2>/</emp-dtl-slash2>
+                <emp-dtl-hire-yy>81</emp-dtl-hire-yy>
+                <filler5 />
+                <emp-dtl-yrs-of-service>37</emp-dtl-yrs-of-service>
+                <filler6 />
+                <emp-dtl-wages>1000.00</emp-dtl-wages>
+                <filler7 />
+                <emp-dtl-ot>0.00</emp-dtl-ot>
+                <filler8 />
+                <emp-dtl-comm>3333.00</emp-dtl-comm>
+                <filler9 />
+                <emp-dtl-total>4333.00</emp-dtl-total>
+              </employee-dtl>
+            </Record>
+            <Record>
+              <employee-dtl>
+                <filler1 />
+                <emp-dtl-name>SAMUEL ADDAMS</emp-dtl-name>
+                <filler2 />
+                <emp-dtl-region>WEST</emp-dtl-region>
+                <filler3 />
+                <emp-dtl-type>H</emp-dtl-type>
+                <filler4 />
+                <emp-dtl-hire-mm>1</emp-dtl-hire-mm>
+                <emp-dtl-slash1>/</emp-dtl-slash1>
+                <emp-dtl-hire-dd>2</emp-dtl-hire-dd>
+                <emp-dtl-slash2>/</emp-dtl-slash2>
+                <emp-dtl-hire-yy>86</emp-dtl-hire-yy>
+                <filler5 />
+                <emp-dtl-yrs-of-service>33</emp-dtl-yrs-of-service>
+                <filler6 />
+                <emp-dtl-wages>1100.00</emp-dtl-wages>
+                <filler7 />
+                <emp-dtl-ot>82.50</emp-dtl-ot>
+                <filler8 />
+                <emp-dtl-comm>0.00</emp-dtl-comm>
+                <filler9 />
+                <emp-dtl-total>1182.50</emp-dtl-total>
+              </employee-dtl>
+            </Record>
+            <Record>
+              <employee-dtl>
+                <filler1 />
+                <emp-dtl-name>MARK JOHNSON</emp-dtl-name>
+                <filler2 />
+                <emp-dtl-region>WEST</emp-dtl-region>
+                <filler3 />
+                <emp-dtl-type>S</emp-dtl-type>
+                <filler4 />
+                <emp-dtl-hire-mm>9</emp-dtl-hire-mm>
+                <emp-dtl-slash1>/</emp-dtl-slash1>
+                <emp-dtl-hire-dd>30</emp-dtl-hire-dd>
+                <emp-dtl-slash2>/</emp-dtl-slash2>
+                <emp-dtl-hire-yy>82</emp-dtl-hire-yy>
+                <filler5 />
+                <emp-dtl-yrs-of-service>36</emp-dtl-yrs-of-service>
+                <filler6 />
+                <emp-dtl-wages>750.00</emp-dtl-wages>
+                <filler7 />
+                <emp-dtl-ot>0.00</emp-dtl-ot>
+                <filler8 />
+                <emp-dtl-comm>6000.00</emp-dtl-comm>
+                <filler9 />
+                <emp-dtl-total>6750.00</emp-dtl-total>
+              </employee-dtl>
+            </Record>
+            <Record>
+              <employee-dtl>
+                <filler1 />
+                <emp-dtl-name />
+                <filler2 />
+                <emp-dtl-region />
+                <filler3 />
+                <emp-dtl-type />
+                <filler4 />
+                <emp-dtl-hire-mm>0</emp-dtl-hire-mm>
+                <emp-dtl-slash1 />
+                <emp-dtl-hire-dd>0</emp-dtl-hire-dd>
+                <emp-dtl-slash2 />
+                <emp-dtl-hire-yy>0</emp-dtl-hire-yy>
+                <filler5 />
+                <emp-dtl-yrs-of-service>0</emp-dtl-yrs-of-service>
+                <filler6 />
+                <emp-dtl-wages />
+                <filler7 />
+                <emp-dtl-ot />
+                <filler8 />
+                <emp-dtl-comm />
+                <filler9 />
+                <emp-dtl-total />
+              </employee-dtl>
+            </Record>
+            <Record>
+              <employee-dtl>
+                <filler1 />
+                <emp-dtl-name>'   TOTAL'</emp-dtl-name>
+                <filler2 />
+                <emp-dtl-region />
+                <filler3 />
+                <emp-dtl-type />
+                <filler4 />
+                <emp-dtl-hire-mm>0</emp-dtl-hire-mm>
+                <emp-dtl-slash1 />
+                <emp-dtl-hire-dd>0</emp-dtl-hire-dd>
+                <emp-dtl-slash2 />
+                <emp-dtl-hire-yy>0</emp-dtl-hire-yy>
+                <filler5 />
+                <emp-dtl-yrs-of-service>0</emp-dtl-yrs-of-service>
+                <filler6 />
+                <emp-dtl-wages />
+                <filler7 />
+                <emp-dtl-ot />
+                <filler8 />
+                <emp-dtl-comm />
+                <filler9 />
+                <emp-dtl-total>45366.00</emp-dtl-total>
+              </employee-dtl>
+            </Record>
+          </Records>
+        </ReadRemoteFile>
+        <DataStore referencedId="rptFileDet" referencePath="" filePath="report_file_expected_detail.xml" />
+        <ReadRemoteFile fileName="HDDRXM0.DEMO.TTTFT.CWXTRPT.EXPECT.ORIG" id="rptFileFull" label="rptFileFull" firstRecord="1" numberRecords="100" mDataDefinitionName="rptunformatted">
+          <Records>
+            <Record>
+              <rpt-unformatted>
+                <filler1 />
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1 />
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1 />
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1>' RUN DATE  09/06/19       EMPLOYEE COMPENSATION REPORT                  PAGE   1'</filler1>
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1 />
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1 />
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1>'                               HIRE  YRS OF'</filler1>
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1>' EMPLOYEE NAME   REGION TYPE   DATE  SERVICE  SALARY   O/T   COMMISSION    TOTAL'</filler1>
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1 />
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1>' JOHN SMITH      NORTH   H   10/15/81   37   1083.00     0.00      0.00  1083.00'</filler1>
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1>' ROY GARDNER     NORTH   S   12/31/92   26    750.00     0.00   3300.00  4050.00'</filler1>
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1>' DAN PEARSON     NORTH   S   07/20/89   30    850.00     0.00   1000.00  1850.00'</filler1>
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1>' MICHAEL DAYTON  SOUTH   S   08/30/82   37    825.00     0.00   6000.00  6825.00'</filler1>
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1>' DENNIS WHITE    SOUTH   S   02/29/88   31   1050.00     0.00   1120.00  2170.00'</filler1>
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1>' VALERIE OLSEN   EAST    S   05/01/94   25    900.00     0.00   5600.00  6500.00'</filler1>
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1>' LAURA MARTIN    EAST    S   06/14/83   36   1225.00     0.00   6000.00  7225.00'</filler1>
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1>' MARCIA SULLIVAN EAST    H   04/05/93   26   1200.00   180.00      0.00  1380.00'</filler1>
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1>' JAMES MORRISON  EAST    H   09/13/91   27   1017.50     0.00      0.00  1017.50'</filler1>
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1>' THOMAS LONG     WEST    H   03/31/87   32   1000.00     0.00      0.00  1000.00'</filler1>
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1>' DONNA BROWN     WEST    S   11/11/81   37   1000.00     0.00   3333.00  4333.00'</filler1>
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1>' SAMUEL ADDAMS   WEST    H   01/02/86   33   1100.00    82.50      0.00  1182.50'</filler1>
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1>' MARK JOHNSON    WEST    S   09/30/82   36    750.00     0.00   6000.00  6750.00'</filler1>
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1 />
+              </rpt-unformatted>
+            </Record>
+            <Record>
+              <rpt-unformatted>
+                <filler1>'    TOTAL                                                               45366.00'</filler1>
+              </rpt-unformatted>
+            </Record>
+          </Records>
+        </ReadRemoteFile>
+        <DataStore referencedId="rptFileFull" referencePath="" filePath="data.xml" />
+      </Test>
+    </XaUnit>
+  </AST>
+  <Context>
+    <ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="5cee98c2d3142c1f90a4976d" logLevel="LOG" remote="false" useSimulations="true" uploadResult="false" timeout="300" readTimeout="30" debuggerType="NONE" jobInfoInterval="3" userid="HDDRXM0">
+      <platformruntime database="DBCCCWCC" driver="com.ibm.db2.jcc.DB2Driver" uri="jdbc:db2://cwcc.compuware.com:546/${database}" environmenttype="BATCH" callinterface="NONE" />
+      <ExtensionData />
+      <XaUnit xmlns:data="http://www.xact.dk/xatester/data/v/1" path="Prepare_RPTFILE.xaunit">
+        <Description>Program reads a file of records for employees containing, times worked, revenues achieved. Based on some rules creates a weekly report. At month end, and additional section gets generated in the report&#xD;
+&#xD;
+Execute program on a "normal" day&#xD;
+- Prepare mainframe input dataset EMPFILE from local data&#xD;
+- Execute CWXTCOB&#xD;
+- Read output file RPTFILE&#xD;
+- Verify for each detail record, that total wages equal sum of wages, overtime and commision&#xD;
+- Compare actual RPTFILE against expected RPTFILE&#xD;
+&#xD;
+Not working yet:&#xD;
+Store expected RPFILE data locally and restore to mainframe</Description>
+        <Test>
+          <ReadRemoteFile fileName="HDDRXM0.DEMO.TTTFT.CWXTRPT.EXPECT.ORIG" id="rptFileDet" label="rptFileDet" firstRecord="10" numberRecords="22" mDataDefinitionName="rptempdet" />
+          <DataStore referencedId="rptFileDet" referencePath="" filePath="report_file_expected_detail.xml" />
+          <ReadRemoteFile fileName="HDDRXM0.DEMO.TTTFT.CWXTRPT.EXPECT.ORIG" id="rptFileFull" label="rptFileFull" firstRecord="1" numberRecords="100" mDataDefinitionName="rptunformatted" />
+          <DataStore referencedId="rptFileFull" referencePath="" filePath="data.xml" />
+        </Test>
+        <MetaData>
+          <MDataDefinition name="rptunformatted">
+            <rpt-unformatted native="01 RPT-UNFORMATTED.">
+              <filler1 type="Character" length="80" bytes="80" native="05 FILLER PIC X(80) VALUE SPACES." />
+            </rpt-unformatted>
+          </MDataDefinition>
+          <MDataDefinition name="rptempdet">
+            <employee-dtl native="01 EMPLOYEE-DTL.">
+              <filler1 type="Character" length="1" bytes="1" native="05 FILLER PIC X VALUE SPACES." />
+              <emp-dtl-name type="Character" length="15" bytes="15" native="05 EMP-DTL-NAME PIC X(15)." />
+              <filler2 type="Character" length="1" bytes="1" native="05 FILLER PIC X VALUE SPACES." />
+              <emp-dtl-region type="Character" length="5" bytes="5" native="05 EMP-DTL-REGION PIC X(5)." />
+              <filler3 type="Character" length="3" bytes="3" native="05 FILLER PIC X(3) VALUE SPACES." />
+              <emp-dtl-type type="Character" length="1" bytes="1" native="05 EMP-DTL-TYPE PIC X." />
+              <filler4 type="Character" length="3" bytes="3" native="05 FILLER PIC X(3) VALUE SPACES." />
+              <emp-dtl-hire-mm type="NumericDisplay" length="2" bytes="2" native="05 EMP-DTL-HIRE-MM PIC 9(2)." signed="false" decimals="0" />
+              <emp-dtl-slash1 type="Character" length="1" bytes="1" native="05 EMP-DTL-SLASH1 PIC X VALUE SPACES." />
+              <emp-dtl-hire-dd type="NumericDisplay" length="2" bytes="2" native="05 EMP-DTL-HIRE-DD PIC 9(2)." signed="false" decimals="0" />
+              <emp-dtl-slash2 type="Character" length="1" bytes="1" native="05 EMP-DTL-SLASH2 PIC X VALUE SPACES." />
+              <emp-dtl-hire-yy type="NumericDisplay" length="2" bytes="2" native="05 EMP-DTL-HIRE-YY PIC 9(2)." signed="false" decimals="0" />
+              <filler5 type="Character" length="3" bytes="3" native="05 FILLER PIC X(3) VALUE SPACES." />
+              <emp-dtl-yrs-of-service type="NumericDisplay" length="2" bytes="2" native="05 EMP-DTL-YRS-OF-SERVICE PIC 9(2)." signed="false" decimals="0" />
+              <filler6 type="Character" length="2" bytes="2" native="05 FILLER PIC X(2) VALUE SPACES." />
+              <emp-dtl-wages type="NumericEdited" length="8" bytes="8" native="05 EMP-DTL-WAGES PIC ZZZZ9.99." signed="false" decimals="0" />
+              <filler7 type="Character" length="1" bytes="1" native="05 FILLER PIC X VALUE SPACES." />
+              <emp-dtl-ot type="NumericEdited" length="8" bytes="8" native="05 EMP-DTL-OT PIC ZZZZ9.99." signed="false" decimals="0" />
+              <filler8 type="Character" length="2" bytes="2" native="05 FILLER PIC X(2) VALUE SPACES." />
+              <emp-dtl-comm type="NumericEdited" length="8" bytes="8" native="05 EMP-DTL-COMM PIC ZZZZ9.99." signed="false" decimals="0" />
+              <filler9 type="Character" length="1" bytes="1" native="05 FILLER PIC X VALUE SPACES." />
+              <emp-dtl-total type="NumericEdited" length="8" bytes="8" native="05 EMP-DTL-TOTAL PIC ZZZZ9.99." signed="false" decimals="0" />
+            </employee-dtl>
+          </MDataDefinition>
+        </MetaData>
+      </XaUnit>
+      <ExternalResources />
+    </ExecutionContext>
+  </Context>
+  <Started>20190906-13-31-16</Started>
+  <Ended>20190906-13-31-30</Ended>
+</XaUnitResult>

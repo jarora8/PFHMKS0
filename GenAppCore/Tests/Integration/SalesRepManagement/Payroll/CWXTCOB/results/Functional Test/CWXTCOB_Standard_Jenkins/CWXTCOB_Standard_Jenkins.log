@@ -1,0 +1,1008 @@
+13:34:39.777 COMMENT   Engine           Test Scenario execution started
+13:34:39.777 INFO      Engine           Using context settings:
+  Engine Version       : 19.6.1
+  Environment id                : 5cee98c2d3142c1f90a4976d
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : cwcc.compuware.com
+  Server port                   : 16196
+  Job execution timeout seconds : 300
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : hddrxm0
+13:34:39.777 INFO      Engine           Setting variables from context and context data extensions
+13:34:39.777 INFO      Engine             id: environmentId      value: 5cee98c2d3142c1f90a4976d
+13:34:39.777 INFO      Engine             id: environmentType    value: BATCH
+13:34:39.777 INFO      Engine             id: userId             value: hddrxm0
+13:34:39.802 INFO      Scope            Interpreting Scope name:Initialize
+13:34:39.802 INFO      Scope            Interpreting Scope name:Variable Set Up
+13:34:39.802 INFO      Variable         Interpreting Variable id:empInDatasetNameHourly
+13:34:39.803 LOG       Variable         Resolved data:
+HDDRXM0.DEMO.TTTFT.CWXTDATA.HOURLY
+13:34:39.804 INFO      Variable         Interpreting Variable id:empInDatasetNameSales
+13:34:39.804 LOG       Variable         Resolved data:
+HDDRXM0.DEMO.TTTFT.CWXTDATA.SALES
+13:34:39.804 INFO      Variable         Interpreting Variable id:empInDatasetNameMgmt
+13:34:39.804 LOG       Variable         Resolved data:
+HDDRXM0.DEMO.TTTFT.CWXTDATA.MGMT
+13:34:39.804 INFO      Variable         Interpreting Variable id:outDatasetNameActual
+13:34:39.804 LOG       Variable         Resolved data:
+HDDRXM0.DEMO.TTTFT.CWXTRPT
+13:34:39.804 INFO      Variable         Interpreting Variable id:outDatasetNameExpected
+13:34:39.804 LOG       Variable         Resolved data:
+HDDRXM0.DEMO.TTTFT.CWXTRPT.EXPECT
+13:34:39.804 INFO      Variable         Interpreting Variable id:empInRecordsHourly dataFile:Input_Data/employee_input_file_hourly.xml
+13:34:39.808 LOG       Variable         Resolved data items from file Input_Data/employee_input_file_hourly.xml
+<record>
+  <employee-work-area>
+    <wa-emp-num>3431</wa-emp-num>
+    <wa-emp-type>H</wa-emp-type>
+    <wa-emp-region>2</wa-emp-region>
+    <wa-emp-name>Ralph Nuesse</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>123 NORTH AVE</wa-emp-street>
+      <wa-emp-city>PLANO</wa-emp-city>
+      <wa-emp-state>TX</wa-emp-state>
+      <wa-emp-zip>57010</wa-emp-zip>
+    </wa-emp-address>
+    <wa-hourly-employee-data>
+      <wa-emp-hours>40</wa-emp-hours>
+      <wa-emp-rate>28.5</wa-emp-rate>
+      <filler1></filler1>
+    </wa-hourly-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>84</wa-emp-hire-yy>
+      <wa-emp-hire-mm>6</wa-emp-hire-mm>
+      <wa-emp-hire-dd>25</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>2523</wa-emp-num>
+    <wa-emp-type>H</wa-emp-type>
+    <wa-emp-region>1</wa-emp-region>
+    <wa-emp-name>JOHN SMITH</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>5456 ELM STREET</wa-emp-street>
+      <wa-emp-city>WAYNE</wa-emp-city>
+      <wa-emp-state>IL</wa-emp-state>
+      <wa-emp-zip>77902</wa-emp-zip>
+    </wa-emp-address>
+    <wa-hourly-employee-data>
+      <wa-emp-hours>38</wa-emp-hours>
+      <wa-emp-rate>28.5</wa-emp-rate>
+      <filler1>' 1'</filler1>
+    </wa-hourly-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>81</wa-emp-hire-yy>
+      <wa-emp-hire-mm>10</wa-emp-hire-mm>
+      <wa-emp-hire-dd>15</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>1568</wa-emp-num>
+    <wa-emp-type>H</wa-emp-type>
+    <wa-emp-region>4</wa-emp-region>
+    <wa-emp-name>THOMAS LONG</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>12 RACE STREET</wa-emp-street>
+      <wa-emp-city>SAN JOSE</wa-emp-city>
+      <wa-emp-state>CA</wa-emp-state>
+      <wa-emp-zip>95126</wa-emp-zip>
+    </wa-emp-address>
+    <wa-hourly-employee-data>
+      <wa-emp-hours>45</wa-emp-hours>
+      <wa-emp-rate>25</wa-emp-rate>
+      <filler1></filler1>
+    </wa-hourly-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>87</wa-emp-hire-yy>
+      <wa-emp-hire-mm>3</wa-emp-hire-mm>
+      <wa-emp-hire-dd>31</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+13:34:39.809 INFO      Variable         Interpreting Variable id:empInRecordsSales dataFile:Input_Data/employee_input_file_sales.xml
+13:34:39.813 LOG       Variable         Resolved data items from file Input_Data/employee_input_file_sales.xml
+<record>
+  <employee-work-area>
+    <wa-emp-num>1431</wa-emp-num>
+    <wa-emp-type>S</wa-emp-type>
+    <wa-emp-region>1</wa-emp-region>
+    <wa-emp-name>TED NESSMAN</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>ONE COPLEY PL</wa-emp-street>
+      <wa-emp-city>BOSTON</wa-emp-city>
+      <wa-emp-state>MA</wa-emp-state>
+      <wa-emp-zip>87120</wa-emp-zip>
+    </wa-emp-address>
+    <wa-sales-employee-data>
+      <wa-sales-salary>1000</wa-sales-salary>
+      <wa-sales-amount>0</wa-sales-amount>
+      <filler1></filler1>
+    </wa-sales-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>79</wa-emp-hire-yy>
+      <wa-emp-hire-mm>1</wa-emp-hire-mm>
+      <wa-emp-hire-dd>30</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>2334</wa-emp-num>
+    <wa-emp-type>S</wa-emp-type>
+    <wa-emp-region>1</wa-emp-region>
+    <wa-emp-name>ROY GARDNER</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>323 OAK STREET</wa-emp-street>
+      <wa-emp-city>EDINA</wa-emp-city>
+      <wa-emp-state>MN</wa-emp-state>
+      <wa-emp-zip>23040</wa-emp-zip>
+    </wa-emp-address>
+    <wa-sales-employee-data>
+      <wa-sales-salary>750</wa-sales-salary>
+      <wa-sales-amount>55000</wa-sales-amount>
+      <filler1></filler1>
+    </wa-sales-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>92</wa-emp-hire-yy>
+      <wa-emp-hire-mm>12</wa-emp-hire-mm>
+      <wa-emp-hire-dd>31</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>6745</wa-emp-num>
+    <wa-emp-type>S</wa-emp-type>
+    <wa-emp-region>2</wa-emp-region>
+    <wa-emp-name>VALERIE OLSEN</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>720 RATZER ROAD</wa-emp-street>
+      <wa-emp-city>WAYNE</wa-emp-city>
+      <wa-emp-state>NJ</wa-emp-state>
+      <wa-emp-zip>87010</wa-emp-zip>
+    </wa-emp-address>
+    <wa-sales-employee-data>
+      <wa-sales-salary>900</wa-sales-salary>
+      <wa-sales-amount>70000</wa-sales-amount>
+      <filler1></filler1>
+    </wa-sales-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>94</wa-emp-hire-yy>
+      <wa-emp-hire-mm>5</wa-emp-hire-mm>
+      <wa-emp-hire-dd>1</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>765</wa-emp-num>
+    <wa-emp-type>S</wa-emp-type>
+    <wa-emp-region>3</wa-emp-region>
+    <wa-emp-name>DAN PEARSON</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>909 HIGHLAND</wa-emp-street>
+      <wa-emp-city>COLUMBUS</wa-emp-city>
+      <wa-emp-state>OH</wa-emp-state>
+      <wa-emp-zip>34111</wa-emp-zip>
+    </wa-emp-address>
+    <wa-sales-employee-data>
+      <wa-sales-salary>850</wa-sales-salary>
+      <wa-sales-amount>25000</wa-sales-amount>
+      <filler1></filler1>
+    </wa-sales-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>89</wa-emp-hire-yy>
+      <wa-emp-hire-mm>7</wa-emp-hire-mm>
+      <wa-emp-hire-dd>20</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>4147</wa-emp-num>
+    <wa-emp-type>S</wa-emp-type>
+    <wa-emp-region>4</wa-emp-region>
+    <wa-emp-name>LAURA MARTIN</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>TWO ENDERBY ST</wa-emp-street>
+      <wa-emp-city>BETHESDA</wa-emp-city>
+      <wa-emp-state>MD</wa-emp-state>
+      <wa-emp-zip>62045</wa-emp-zip>
+    </wa-emp-address>
+    <wa-sales-employee-data>
+      <wa-sales-salary>1225</wa-sales-salary>
+      <wa-sales-amount>75000</wa-sales-amount>
+      <filler1></filler1>
+    </wa-sales-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>83</wa-emp-hire-yy>
+      <wa-emp-hire-mm>6</wa-emp-hire-mm>
+      <wa-emp-hire-dd>14</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>959</wa-emp-num>
+    <wa-emp-type>S</wa-emp-type>
+    <wa-emp-region>4</wa-emp-region>
+    <wa-emp-name>DONNA BROWN</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>3 SAN THOMAS</wa-emp-street>
+      <wa-emp-city>CAMPBELL</wa-emp-city>
+      <wa-emp-state>CA</wa-emp-state>
+      <wa-emp-zip>95133</wa-emp-zip>
+    </wa-emp-address>
+    <wa-sales-employee-data>
+      <wa-sales-salary>1000</wa-sales-salary>
+      <wa-sales-amount>55550</wa-sales-amount>
+      <filler1></filler1>
+    </wa-sales-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>81</wa-emp-hire-yy>
+      <wa-emp-hire-mm>11</wa-emp-hire-mm>
+      <wa-emp-hire-dd>11</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>2010</wa-emp-num>
+    <wa-emp-type>S</wa-emp-type>
+    <wa-emp-region>2</wa-emp-region>
+    <wa-emp-name>MICHAEL DAYTON</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>11 UNION STREET</wa-emp-street>
+      <wa-emp-city>ORLANDO</wa-emp-city>
+      <wa-emp-state>FL</wa-emp-state>
+      <wa-emp-zip>18222</wa-emp-zip>
+    </wa-emp-address>
+    <wa-sales-employee-data>
+      <wa-sales-salary>825</wa-sales-salary>
+      <wa-sales-amount>75000</wa-sales-amount>
+      <filler1></filler1>
+    </wa-sales-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>82</wa-emp-hire-yy>
+      <wa-emp-hire-mm>8</wa-emp-hire-mm>
+      <wa-emp-hire-dd>30</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>5213</wa-emp-num>
+    <wa-emp-type>S</wa-emp-type>
+    <wa-emp-region>2</wa-emp-region>
+    <wa-emp-name>DENNIS WHITE</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>47 CARROLL PL</wa-emp-street>
+      <wa-emp-city>MIAMI</wa-emp-city>
+      <wa-emp-state>FL</wa-emp-state>
+      <wa-emp-zip>87021</wa-emp-zip>
+    </wa-emp-address>
+    <wa-sales-employee-data>
+      <wa-sales-salary>1050</wa-sales-salary>
+      <wa-sales-amount>28000</wa-sales-amount>
+      <filler1></filler1>
+    </wa-sales-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>88</wa-emp-hire-yy>
+      <wa-emp-hire-mm>2</wa-emp-hire-mm>
+      <wa-emp-hire-dd>29</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>3215</wa-emp-num>
+    <wa-emp-type>S</wa-emp-type>
+    <wa-emp-region>4</wa-emp-region>
+    <wa-emp-name>MARK JOHNSON</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>12 HOBART ROAD</wa-emp-street>
+      <wa-emp-city>PHOENIX</wa-emp-city>
+      <wa-emp-state>AZ</wa-emp-state>
+      <wa-emp-zip>31234</wa-emp-zip>
+    </wa-emp-address>
+    <wa-sales-employee-data>
+      <wa-sales-salary>750</wa-sales-salary>
+      <wa-sales-amount>75000</wa-sales-amount>
+      <filler1></filler1>
+    </wa-sales-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>82</wa-emp-hire-yy>
+      <wa-emp-hire-mm>9</wa-emp-hire-mm>
+      <wa-emp-hire-dd>30</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+13:34:39.814 INFO      Variable         Interpreting Variable id:empInRecordsMgmt dataFile:Input_Data/employee_input_file_mgmt.xml
+13:34:39.816 LOG       Variable         Resolved data items from file Input_Data/employee_input_file_mgmt.xml
+<record>
+  <employee-work-area>
+    <wa-emp-num>2136</wa-emp-num>
+    <wa-emp-type>M</wa-emp-type>
+    <wa-emp-region>4</wa-emp-region>
+    <wa-emp-name>SAM MILLS</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>13 SUTTON BLVD</wa-emp-street>
+      <wa-emp-city>WALNUT</wa-emp-city>
+      <wa-emp-state>CA</wa-emp-state>
+      <wa-emp-zip>90066</wa-emp-zip>
+    </wa-emp-address>
+    <wa-mgmt-employee-data>
+      <wa-mgmt-salary>1250</wa-mgmt-salary>
+      <filler1></filler1>
+    </wa-mgmt-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>90</wa-emp-hire-yy>
+      <wa-emp-hire-mm>3</wa-emp-hire-mm>
+      <wa-emp-hire-dd>17</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>887</wa-emp-num>
+    <wa-emp-type>M</wa-emp-type>
+    <wa-emp-region>1</wa-emp-region>
+    <wa-emp-name>KATHY DETT</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>888 SHARON LANE</wa-emp-street>
+      <wa-emp-city>DETROIT</wa-emp-city>
+      <wa-emp-state>MI</wa-emp-state>
+      <wa-emp-zip>48045</wa-emp-zip>
+    </wa-emp-address>
+    <wa-mgmt-employee-data>
+      <wa-mgmt-salary>1500</wa-mgmt-salary>
+      <filler1></filler1>
+    </wa-mgmt-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>85</wa-emp-hire-yy>
+      <wa-emp-hire-mm>6</wa-emp-hire-mm>
+      <wa-emp-hire-dd>21</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>1318</wa-emp-num>
+    <wa-emp-type>M</wa-emp-type>
+    <wa-emp-region>2</wa-emp-region>
+    <wa-emp-name>AUDREY CLARK</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>10 LAKE STREET</wa-emp-street>
+      <wa-emp-city>HOUSTON</wa-emp-city>
+      <wa-emp-state>TX</wa-emp-state>
+      <wa-emp-zip>87010</wa-emp-zip>
+    </wa-emp-address>
+    <wa-mgmt-employee-data>
+      <wa-mgmt-salary>1125</wa-mgmt-salary>
+      <filler1></filler1>
+    </wa-mgmt-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>80</wa-emp-hire-yy>
+      <wa-emp-hire-mm>10</wa-emp-hire-mm>
+      <wa-emp-hire-dd>7</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>1189</wa-emp-num>
+    <wa-emp-type>M</wa-emp-type>
+    <wa-emp-region>3</wa-emp-region>
+    <wa-emp-name>KAREN JOHNSON</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>5500 PARK AVE</wa-emp-street>
+      <wa-emp-city>NEW YORK</wa-emp-city>
+      <wa-emp-state>NY</wa-emp-state>
+      <wa-emp-zip>10012</wa-emp-zip>
+    </wa-emp-address>
+    <wa-mgmt-employee-data>
+      <wa-mgmt-salary>2000</wa-mgmt-salary>
+      <filler1></filler1>
+    </wa-mgmt-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>76</wa-emp-hire-yy>
+      <wa-emp-hire-mm>12</wa-emp-hire-mm>
+      <wa-emp-hire-dd>1</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+13:34:39.816 INFO      Variable         Interpreting Variable id:rptExpectedDetailRecords dataFile:Output_Data/report_file_expected_detail.xml
+13:34:39.832 LOG       Variable         Resolved data items from file Output_Data/report_file_expected_detail.xml
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>JOHN SMITH</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>NORTH</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>H</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>10</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>15</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>81</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>37</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1083.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>0.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>1083.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>ROY GARDNER</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>NORTH</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>12</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>31</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>92</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>26</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>750.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>3300.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>4050.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>DAN PEARSON</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>NORTH</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>7</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>20</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>89</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>30</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>850.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>1000.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>1850.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>MICHAEL DAYTON</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>SOUTH</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>8</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>30</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>82</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>37</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>825.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>6000.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>6825.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>DENNIS WHITE</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>SOUTH</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>2</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>29</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>88</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>31</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1050.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>1120.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>2170.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>VALERIE OLSEN</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>EAST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>5</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>1</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>94</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>25</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>900.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>5600.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>6500.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>LAURA MARTIN</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>EAST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>6</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>14</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>83</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>36</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1225.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>6000.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>7225.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>MARCIA SULLIVAN</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>EAST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>H</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>4</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>5</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>93</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>26</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1200.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>180.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>0.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>1380.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>JAMES MORRISON</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>EAST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>H</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>9</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>13</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>91</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>27</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1017.50</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>0.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>1017.50</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>THOMAS LONG</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>WEST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>H</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>3</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>31</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>87</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>32</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1000.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>0.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>1000.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>DONNA BROWN</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>WEST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>11</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>11</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>81</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>37</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1000.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>3333.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>4333.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>SAMUEL ADDAMS</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>WEST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>H</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>1</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>2</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>86</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>33</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1100.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>82.50</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>0.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>1182.50</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>MARK JOHNSON</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>WEST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>9</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>30</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>82</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>36</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>750.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>6000.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>6750.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name></emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region></emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type></emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>0</emp-dtl-hire-mm>
+    <emp-dtl-slash1></emp-dtl-slash1>
+    <emp-dtl-hire-dd>0</emp-dtl-hire-dd>
+    <emp-dtl-slash2></emp-dtl-slash2>
+    <emp-dtl-hire-yy>0</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>0</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages></emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot></emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm></emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total></emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>'   TOTAL'</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region></emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type></emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>0</emp-dtl-hire-mm>
+    <emp-dtl-slash1></emp-dtl-slash1>
+    <emp-dtl-hire-dd>0</emp-dtl-hire-dd>
+    <emp-dtl-slash2></emp-dtl-slash2>
+    <emp-dtl-hire-yy>0</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>0</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages></emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot></emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm></emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>45366.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+13:34:39.834 INFO      Variable         Interpreting Variable id:rptExpectedFullRecords dataFile:Output_Data/report_file_expected_unformatted.xml
+13:34:39.837 LOG       Variable         Resolved data items from file Output_Data/report_file_expected_unformatted.xml
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' RUN DATE  09/06/19       EMPLOYEE COMPENSATION REPORT                  PAGE   1'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>'                               HIRE  YRS OF'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' EMPLOYEE NAME   REGION TYPE   DATE  SERVICE  SALARY   O/T   COMMISSION    TOTAL'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' JOHN SMITH      NORTH   H   10/15/81   37   1083.00     0.00      0.00  1083.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' ROY GARDNER     NORTH   S   12/31/92   26    750.00     0.00   3300.00  4050.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' DAN PEARSON     NORTH   S   07/20/89   30    850.00     0.00   1000.00  1850.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' MICHAEL DAYTON  SOUTH   S   08/30/82   37    825.00     0.00   6000.00  6825.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' DENNIS WHITE    SOUTH   S   02/29/88   31   1050.00     0.00   1120.00  2170.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' VALERIE OLSEN   EAST    S   05/01/94   25    900.00     0.00   5600.00  6500.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' LAURA MARTIN    EAST    S   06/14/83   36   1225.00     0.00   6000.00  7225.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' MARCIA SULLIVAN EAST    H   04/05/93   26   1200.00   180.00      0.00  1380.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' JAMES MORRISON  EAST    H   09/13/91   27   1017.50     0.00      0.00  1017.50'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' THOMAS LONG     WEST    H   03/31/87   32   1000.00     0.00      0.00  1000.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' DONNA BROWN     WEST    S   11/11/81   37   1000.00     0.00   3333.00  4333.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' SAMUEL ADDAMS   WEST    H   01/02/86   33   1100.00    82.50      0.00  1182.50'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' MARK JOHNSON    WEST    S   09/30/82   36    750.00     0.00   6000.00  6750.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>'    TOTAL                                                               45366.00'</filler1>
+  </rpt-unformatted>
+</record>
+13:34:39.837 INFO      Scope            Scope completed
+13:34:39.837 INFO      Scope            Interpreting Scope name:Dataset Setup
+13:34:39.837 INFO      WriteRemoteFile  Interpreting WriteRemoteFile
+13:34:39.839 INFO      WriteRemoteFile  Variable substitution found in fileName name
+13:34:39.839 INFO      WriteRemoteFile  Actual fileName name is now:HDDRXM0.DEMO.TTTFT.CWXTDATA.HOURLY
+13:34:39.839 INFO      WriteRemoteFile  Finding referenced records from the id: empInRecordsHourly
+13:34:39.839 LOG       WriteRemoteFile  Verifies that records conform to the MDataDefinition
+13:34:39.840 INFO      WriteRemoteFile  Number of records to write:3
+13:34:39.840 INFO      WriteRemoteFile    File name             : HDDRXM0.DEMO.TTTFT.CWXTDATA.HOURLY
+13:34:39.840 INFO      WriteRemoteFile    Record length         : 80
+13:34:39.840 INFO      WriteRemoteFile    Record format         : FB
+13:34:39.840 INFO      WriteRemoteFile    Block size            : 27920
+13:34:39.840 INFO      WriteRemoteFile    Volumn name           : PCC006
+13:34:39.840 INFO      WriteRemoteFile    Unit name             : 
+13:34:39.840 INFO      WriteRemoteFile    Unit type             : TRK
+13:34:39.840 INFO      WriteRemoteFile    Primary allocation    : 5
+13:34:39.840 INFO      WriteRemoteFile    Secondary allocation  : 5
+13:34:39.840 INFO      WriteRemoteFile    Directory block count : 0
+13:34:39.840 INFO      WriteRemoteFile    Dataset type          : NONE
+13:34:39.840 INFO      WriteRemoteFile    Disposition           : Old
+13:34:39.860 INFO      WriteRemoteFile  Sending Write dataset request to Host 
+13:34:40.052 ERROR     CWCC Batch       Error initializing Dirs: Unable to determine if file /u/xatester/hddrxm0 exists. Reason Unable to check for existence of the specified ZFS file. A MVS environmental or internal error has occurred.
+13:34:40.052 ERROR     Employee Indataset Hourly Unable to write dataset:HDDRXM0.DEMO.TTTFT.CWXTDATA.HOURLY at the host. com.compuware.totaltest.common.hci.api.exceptions.HciServicesFileIOException: Unable to determine if file /u/xatester/hddrxm0 exists. Reason Unable to check for existence of the specified ZFS file. A MVS environmental or internal error has occurred.
+13:34:40.053 ERROR     Employee Indataset Hourly java.io.IOException: com.compuware.totaltest.common.hci.api.exceptions.HciServicesFileIOException: Unable to determine if file /u/xatester/hddrxm0 exists. Reason Unable to check for existence of the specified ZFS file. A MVS environmental or internal error has occurred.
+	at com.compuware.xatester.xaunit.platforms.strategies.HCIHostCommunicator.initiate(HCIHostCommunicator.java:136)
+	at com.compuware.xatester.xaunit.platforms.strategies.AbstractSocketandFTPStrategy.initiate(AbstractSocketandFTPStrategy.java:73)
+	at com.compuware.xatester.xaunit.platforms.HostProcess.execute(HostProcess.java:230)
+	at com.compuware.xatester.xaunit.extensions.WriteRemoteFileComponent.interprete(WriteRemoteFileComponent.java:355)
+	at com.compuware.xatester.xaunit.extensions.WriteRemoteFileComponent.interprete(WriteRemoteFileComponent.java:1)
+	at com.compuware.xatester.xaunit.execution.XaUnitInterpreter.interpretChildComponents(XaUnitInterpreter.java:93)
+	at com.compuware.xatester.xaunit.extensions.ScopeComponent.interprete(ScopeComponent.java:125)
+	at com.compuware.xatester.xaunit.execution.XaUnitInterpreter.interpretChildComponents(XaUnitInterpreter.java:93)
+	at com.compuware.xatester.xaunit.extensions.ScopeComponent.interprete(ScopeComponent.java:125)
+	at com.compuware.xatester.xaunit.execution.XaUnitInterpreter.interpretChildComponents(XaUnitInterpreter.java:93)
+	at com.compuware.xatester.xaunit.execution.XaUnitInterpreter.interpret(XaUnitInterpreter.java:239)
+	at com.compuware.xatester.ui.execution.XaUnitExecutor.execute(XaUnitExecutor.java:211)
+	at com.compuware.xatester.ui.execution.XaUnitExecutor.access$0(XaUnitExecutor.java:207)
+	at com.compuware.xatester.ui.execution.XaUnitExecutor$XaUnitExecutorJob.run(XaUnitExecutor.java:319)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: com.compuware.totaltest.common.hci.api.exceptions.HciServicesFileIOException: Unable to determine if file /u/xatester/hddrxm0 exists. Reason Unable to check for existence of the specified ZFS file. A MVS environmental or internal error has occurred.
+	at com.compuware.totaltest.common.hci.resource.HciResourceServicesUSSFiles.fileExists(HciResourceServicesUSSFiles.java:128)
+	at com.compuware.xatester.xaunit.platforms.strategies.HCIClient.fileExists(HCIClient.java:189)
+	at com.compuware.xatester.xaunit.platforms.strategies.HCIClient.initiateDirs(HCIClient.java:442)
+	at com.compuware.xatester.xaunit.platforms.strategies.HCIHostCommunicator.initiate(HCIHostCommunicator.java:133)
+	... 14 more
+Caused by: com.compuware.ecc.core.exceptions.EccException: Unable to check for existence of the specified ZFS file. A MVS environmental or internal error has occurred.
+	at com.compuware.ecc.css.api.commandsets.ZFSCommandSet.createEccException(ZFSCommandSet.java:1141)
+	at com.compuware.ecc.css.api.commandsets.ZFSCommandSet.fileExists(ZFSCommandSet.java:1017)
+	at com.compuware.totaltest.common.hci.resource.HciResourceServicesUSSFiles.fileExists(HciResourceServicesUSSFiles.java:104)
+	... 17 more
+
+13:34:40.053 ERROR     Engine           Unable to write dataset:HDDRXM0.DEMO.TTTFT.CWXTDATA.HOURLY at the host. 
+13:34:40.053 ERROR     Engine           An error occurred. Now stopping the execution.
+13:34:40.053 ERROR     Scope            Scope completed unexpectedly. A child component failed.
+13:34:40.053 ERROR     Scope            Scope completed unexpectedly. A child component failed.
+13:34:40.053 COMMENT   Engine           Test Scenario execution ended

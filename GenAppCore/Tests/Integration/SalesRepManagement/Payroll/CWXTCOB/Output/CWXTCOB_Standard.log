@@ -1,0 +1,316 @@
+09:25:07.246 INFO      TOPAZ            ***************************************
+09:25:07.247 INFO      TOPAZ            ** Execution from Topaz with options **
+09:25:07.247 INFO      TOPAZ            ***************************************
+09:25:07.247 INFO      TOPAZ            Using repository: true
+09:25:07.247 INFO      TOPAZ            Repository URL: http://cwcc.compuware.com:2020/totaltestapi/
+09:25:07.247 INFO      TOPAZ            ***************************************
+09:25:07.250 INFO      Engine           Test Scenario execution started
+09:25:07.250 INFO      Engine           Using context settings:
+  Engine Version                : 20.5
+  Environment id                : 5b508b8a787be73b59238d38
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : cwcc.nasa.cpwr.corp
+  Server port                   : 16196
+  Job execution timeout seconds : 300
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : HDDRXM0
+  Use Repository Server         : true
+09:25:07.250 INFO      Engine           Setting variables from context and context data extensions
+09:25:07.250 INFO      Engine             id: environmentId      value: 5b508b8a787be73b59238d38
+09:25:07.251 INFO      Engine             id: environmentType    value: BATCH
+09:25:07.251 INFO      Engine             id: userId             value: HDDRXM0
+09:25:07.251 INFO      Engine             id: accountingInfo     value: 
+09:25:07.253 INFO      Scope            Interpreting Scope name:Config
+09:25:07.253 INFO      Variable         Interpreting Variable id:userid
+09:25:07.256 INFO      Variable         Interpreting Variable id:ispw_app
+09:25:07.256 INFO      Variable         Interpreting Variable id:ispw_level
+09:25:07.257 INFO      Scope            Scope completed
+09:25:07.257 INFO      Scope            Interpreting Scope name:Initialize
+09:25:07.257 INFO      Scope            Interpreting Scope name:Variable Set Up
+09:25:07.257 INFO      Variable         Interpreting Variable id:datasetQualifier
+09:25:07.257 INFO      Variable         Interpreting Variable id:empMasterDatasetName
+09:25:07.257 INFO      Variable         Interpreting Variable id:empInDatasetName
+09:25:07.257 INFO      Variable         Interpreting Variable id:outDatasetNameActual
+09:25:07.258 INFO      Variable         Interpreting Variable id:outDatasetNameExpected
+09:25:07.258 INFO      Scope            Scope completed
+09:25:07.258 INFO      Scope            Scope completed
+09:25:07.258 INFO      Scope            Interpreting Scope name:Test Set Up
+09:25:07.258 INFO      Job              Interpreting JOB: Prepare Input Dataset
+09:25:07.258 INFO      Job              Variable substitution found in Job JCL, now substituted
+09:25:07.270 INFO      CWCC Batch       Sending Job execution request to Host 
+09:25:09.535 INFO      CWCC Batch       Job execution completed with status:
+  Job status     : COMPLETED
+  Job status msg : Job HDDRXM0F(J0104819) ended with return code: 0000
+  Job name       : HDDRXM0F
+  Job id         : J0104819
+  Return code    : 0000
+  Abend code     : 
+  Abend reason   : 
+09:25:09.536 INFO      Job              Successfully executed job: Prepare Input Dataset
+09:25:09.538 INFO      Job              Interpreting JOB: Set Date
+09:25:09.539 INFO      Job              Variable substitution found in Job JCL, now substituted
+09:25:09.539 INFO      CWCC Batch       Sending Job execution request to Host 
+09:25:11.363 INFO      CWCC Batch       Job execution completed with status:
+  Job status     : COMPLETED
+  Job status msg : Job HDDRXM0G(J0104820) ended with return code: 0004
+  Job name       : HDDRXM0G
+  Job id         : J0104820
+  Return code    : 0004
+  Abend code     : 
+  Abend reason   : 
+09:25:11.363 INFO      Job              Successfully executed job: Set Date
+09:25:11.365 INFO      Scope            Scope completed
+09:25:11.365 INFO      Scope            Interpreting Scope name:Execute Test
+09:25:11.366 INFO      Component        Interpreting Component: CWXTCOB program:CWXTCOB
+09:25:11.367 INFO      Component        Using setup JCL for execution
+09:25:11.367 INFO      Component          Variable substitution found in setup JCL, now substituted
+09:25:11.368 INFO      Component          JCL for setup:
+//EMPFILE DD DISP=SHR,
+//  DSN=SALESSUP.GITE.TEST.CWXTDATA
+//RPTFILE DD DISP=SHR,
+//  DSN=SALESSUP.GITE.TEST.CWXTRPT
+09:25:11.410 INFO      CWCC Batch       Sending Module execution request to Host for module:CWXTCOB rollback:false
+09:25:11.943 INFO      HCIClient        Creating job directory /u/xatester/hddrxm0/3e91e8f65a214da4bd375ce91288ed4e
+09:25:17.228 INFO      HCIClient        Job has been started at host with JobId:J0104821
+09:25:21.045 INFO      CWCC Batch       Job execution completed with status:
+  Job status     : COMPLETED
+  Job status msg : Job HDDRXM0E(J0104821) ended with return code: 0000
+  Job name       : HDDRXM0E
+  Job id         : J0104821
+  Return code    : 0000
+  Abend code     : 
+  Abend reason   : 
+09:25:22.516 INFO      CWCC Batch       Component completed with program exit: +0
+09:25:24.318 WARNING   CWCC Batch       Error deleting job directory /u/xatester/hddrxm0/3e91e8f65a214da4bd375ce91288ed4e: Unable to delete directory /u/xatester/hddrxm0/3e91e8f65a214da4bd375ce91288ed4e. Reason An error occurred while processing the requested action. If possible, capture the dump from the HCI and contact Compuware Customer Support with the details of this error.
+09:25:24.318 WARNING   CWCC Batch       Unable to cleanup files at the server. com.compuware.totaltest.common.hci.api.exceptions.HciServicesFileIOException: Unable to delete directory /u/xatester/hddrxm0/3e91e8f65a214da4bd375ce91288ed4e. Reason An error occurred while processing the requested action. If possible, capture the dump from the HCI and contact Compuware Customer Support with the details of this error.
+09:25:24.323 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
+09:25:24.716 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+09:25:24.717 INFO      Component        Finished interpreting Component: CWXTCOB program:CWXTCOB
+09:25:24.717 INFO      Scope            Scope completed
+09:25:24.717 INFO      Scope            Interpreting Scope name:Verify
+09:25:24.717 INFO      ReadRemoteFile   Interpreting ReadRemoteFile for fileName: ${outDatasetNameActual} first record:10 number of records to read: 12
+09:25:24.717 INFO      ReadRemoteFile     Variable substitution found in file name
+09:25:24.718 INFO      ReadRemoteFile     File name is now:SALESSUP.GITE.TEST.CWXTRPT
+09:25:24.720 INFO      ReadRemoteFile   Sending Read dataset request to Host 
+09:25:27.053 INFO      HCIClient        Creating job directory /u/xatester/hddrxm0/2f821b078c9c43e8a5c74c75a5e18a19
+09:25:44.774 INFO      HCIClient        Job has been started at host with JobId:J0104823
+09:25:47.041 INFO      CWCC Batch       Job execution completed with status:
+  Job status     : COMPLETED
+  Job status msg : Job HDDRXM0I(J0104823) ended with return code: 0000
+  Job name       : HDDRXM0I
+  Job id         : J0104823
+  Return code    : 0000
+  Abend code     : 
+  Abend reason   : 
+09:25:49.271 WARNING   CWCC Batch       Error deleting job directory /u/xatester/hddrxm0/2f821b078c9c43e8a5c74c75a5e18a19: Unable to delete directory /u/xatester/hddrxm0/2f821b078c9c43e8a5c74c75a5e18a19. Reason An error occurred while processing the requested action. If possible, capture the dump from the HCI and contact Compuware Customer Support with the details of this error.
+09:25:49.272 WARNING   CWCC Batch       Unable to cleanup files at the server. com.compuware.totaltest.common.hci.api.exceptions.HciServicesFileIOException: Unable to delete directory /u/xatester/hddrxm0/2f821b078c9c43e8a5c74c75a5e18a19. Reason An error occurred while processing the requested action. If possible, capture the dump from the HCI and contact Compuware Customer Support with the details of this error.
+09:25:49.274 INFO      ReadRemoteFile   Records received, count= 12
+09:25:49.274 INFO      ReadRemoteFile   The records can be refered to as an array through readOutDatasetActual.record[<index>]
+09:25:49.275 INFO      IterateData      Interpreting IterateData id: loopThroughOutput. Number of data iterations: 12. Variable loopThroughOutputIndex contains iteration number
+09:25:49.275 INFO      IterateData      Iteration number 0 started.
+09:25:49.275 INFO      Variable         Interpreting Variable id:expectTotal
+09:25:49.275 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-wages'])
+var tmpOt    = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-ot'])
+var tmpComm  = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-comm'])
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+09:25:49.376 INFO      Variable         Interpreting Variable id:actualTotal
+09:25:49.376 INFO      Expression       Interpreting Expression:var tmpOutput = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-total'])
+
+tmpOutput.toFixed(2)
+09:25:49.445 INFO      Verify           Interpreting Verify component name:Total
+09:25:49.570 INFO      Verify           Expected and Actual data was found to be identical
+09:25:49.571 INFO      IterateData      Iteration number 1 started.
+09:25:49.571 INFO      Variable         Interpreting Variable id:expectTotal
+09:25:49.571 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-wages'])
+var tmpOt    = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-ot'])
+var tmpComm  = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-comm'])
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+09:25:49.626 INFO      Variable         Interpreting Variable id:actualTotal
+09:25:49.627 INFO      Expression       Interpreting Expression:var tmpOutput = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-total'])
+
+tmpOutput.toFixed(2)
+09:25:49.670 INFO      Verify           Interpreting Verify component name:Total
+09:25:49.749 INFO      Verify           Expected and Actual data was found to be identical
+09:25:49.749 INFO      IterateData      Iteration number 2 started.
+09:25:49.750 INFO      Variable         Interpreting Variable id:expectTotal
+09:25:49.750 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-wages'])
+var tmpOt    = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-ot'])
+var tmpComm  = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-comm'])
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+09:25:49.792 INFO      Variable         Interpreting Variable id:actualTotal
+09:25:49.792 INFO      Expression       Interpreting Expression:var tmpOutput = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-total'])
+
+tmpOutput.toFixed(2)
+09:25:49.837 INFO      Verify           Interpreting Verify component name:Total
+09:25:49.921 INFO      Verify           Expected and Actual data was found to be identical
+09:25:49.921 INFO      IterateData      Iteration number 3 started.
+09:25:49.921 INFO      Variable         Interpreting Variable id:expectTotal
+09:25:49.921 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-wages'])
+var tmpOt    = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-ot'])
+var tmpComm  = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-comm'])
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+09:25:49.959 INFO      Variable         Interpreting Variable id:actualTotal
+09:25:49.960 INFO      Expression       Interpreting Expression:var tmpOutput = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-total'])
+
+tmpOutput.toFixed(2)
+09:25:49.996 INFO      Verify           Interpreting Verify component name:Total
+09:25:50.069 INFO      Verify           Expected and Actual data was found to be identical
+09:25:50.070 INFO      IterateData      Iteration number 4 started.
+09:25:50.070 INFO      Variable         Interpreting Variable id:expectTotal
+09:25:50.070 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-wages'])
+var tmpOt    = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-ot'])
+var tmpComm  = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-comm'])
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+09:25:50.108 INFO      Variable         Interpreting Variable id:actualTotal
+09:25:50.108 INFO      Expression       Interpreting Expression:var tmpOutput = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-total'])
+
+tmpOutput.toFixed(2)
+09:25:50.143 INFO      Verify           Interpreting Verify component name:Total
+09:25:50.208 INFO      Verify           Expected and Actual data was found to be identical
+09:25:50.209 INFO      IterateData      Iteration number 5 started.
+09:25:50.209 INFO      Variable         Interpreting Variable id:expectTotal
+09:25:50.209 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-wages'])
+var tmpOt    = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-ot'])
+var tmpComm  = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-comm'])
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+09:25:50.245 INFO      Variable         Interpreting Variable id:actualTotal
+09:25:50.246 INFO      Expression       Interpreting Expression:var tmpOutput = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-total'])
+
+tmpOutput.toFixed(2)
+09:25:50.285 INFO      Verify           Interpreting Verify component name:Total
+09:25:50.354 INFO      Verify           Expected and Actual data was found to be identical
+09:25:50.354 INFO      IterateData      Iteration number 6 started.
+09:25:50.354 INFO      Variable         Interpreting Variable id:expectTotal
+09:25:50.354 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-wages'])
+var tmpOt    = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-ot'])
+var tmpComm  = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-comm'])
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+09:25:50.388 INFO      Variable         Interpreting Variable id:actualTotal
+09:25:50.388 INFO      Expression       Interpreting Expression:var tmpOutput = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-total'])
+
+tmpOutput.toFixed(2)
+09:25:50.422 INFO      Verify           Interpreting Verify component name:Total
+09:25:50.483 INFO      Verify           Expected and Actual data was found to be identical
+09:25:50.484 INFO      IterateData      Iteration number 7 started.
+09:25:50.484 INFO      Variable         Interpreting Variable id:expectTotal
+09:25:50.484 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-wages'])
+var tmpOt    = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-ot'])
+var tmpComm  = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-comm'])
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+09:25:50.518 INFO      Variable         Interpreting Variable id:actualTotal
+09:25:50.519 INFO      Expression       Interpreting Expression:var tmpOutput = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-total'])
+
+tmpOutput.toFixed(2)
+09:25:50.553 INFO      Verify           Interpreting Verify component name:Total
+09:25:50.609 INFO      Verify           Expected and Actual data was found to be identical
+09:25:50.609 INFO      IterateData      Iteration number 8 started.
+09:25:50.609 INFO      Variable         Interpreting Variable id:expectTotal
+09:25:50.609 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-wages'])
+var tmpOt    = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-ot'])
+var tmpComm  = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-comm'])
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+09:25:50.635 INFO      Variable         Interpreting Variable id:actualTotal
+09:25:50.636 INFO      Expression       Interpreting Expression:var tmpOutput = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-total'])
+
+tmpOutput.toFixed(2)
+09:25:50.666 INFO      Verify           Interpreting Verify component name:Total
+09:25:50.717 INFO      Verify           Expected and Actual data was found to be identical
+09:25:50.717 INFO      IterateData      Iteration number 9 started.
+09:25:50.717 INFO      Variable         Interpreting Variable id:expectTotal
+09:25:50.718 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-wages'])
+var tmpOt    = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-ot'])
+var tmpComm  = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-comm'])
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+09:25:50.740 INFO      Variable         Interpreting Variable id:actualTotal
+09:25:50.741 INFO      Expression       Interpreting Expression:var tmpOutput = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-total'])
+
+tmpOutput.toFixed(2)
+09:25:50.772 INFO      Verify           Interpreting Verify component name:Total
+09:25:50.850 INFO      Verify           Expected and Actual data was found to be identical
+09:25:50.850 INFO      IterateData      Iteration number 10 started.
+09:25:50.850 INFO      Variable         Interpreting Variable id:expectTotal
+09:25:50.850 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-wages'])
+var tmpOt    = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-ot'])
+var tmpComm  = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-comm'])
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+09:25:50.876 INFO      Variable         Interpreting Variable id:actualTotal
+09:25:50.877 INFO      Expression       Interpreting Expression:var tmpOutput = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-total'])
+
+tmpOutput.toFixed(2)
+09:25:50.909 INFO      Verify           Interpreting Verify component name:Total
+09:25:50.957 INFO      Verify           Expected and Actual data was found to be identical
+09:25:50.958 INFO      IterateData      Iteration number 11 started.
+09:25:50.958 INFO      Variable         Interpreting Variable id:expectTotal
+09:25:50.958 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-wages'])
+var tmpOt    = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-ot'])
+var tmpComm  = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-comm'])
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+09:25:50.986 INFO      Variable         Interpreting Variable id:actualTotal
+09:25:50.986 INFO      Expression       Interpreting Expression:var tmpOutput = Number(loopThroughOutput.record['employee-dtl']['emp-dtl-total'])
+
+tmpOutput.toFixed(2)
+09:25:51.010 INFO      Verify           Interpreting Verify component name:Total
+09:25:51.055 INFO      Verify           Expected and Actual data was found to be identical
+09:25:51.055 INFO      IterateData      IterateData completed
+09:25:51.055 INFO      Scope            Scope completed
+09:25:51.055 INFO      Scope            Interpreting Scope name:Compare
+09:25:51.056 INFO      FileAIDCompare   Executing File-AID Compare element with assertions:
+09:25:51.056 INFO      FileAIDCompare     Assert on changed records : true
+09:25:51.056 INFO      FileAIDCompare     Assert on inserted records: true
+09:25:51.056 INFO      FileAIDCompare     Assert on deleted records : true
+09:25:51.056 INFO      FileAIDCompare   Variable substitution found in Job JCL, now substituted
+09:25:51.056 INFO      CWCC Batch       Sending Job execution request to Host 
+09:25:54.718 INFO      CWCC Batch       Job execution completed with status:
+  Job status     : COMPLETED
+  Job status msg : Job HDDRXM0F(J0104824) ended with return code: 0000
+  Job name       : HDDRXM0F
+  Job id         : J0104824
+  Return code    : 0000
+  Abend code     : 
+  Abend reason   : 
+09:25:56.593 ERROR     FileAIDCompare   Number of records changed: 12. We now set the test scenario to failed
+09:25:56.594 INFO      Scope            Scope completed
+09:25:56.594 INFO      Scope            Interpreting Scope name:Test Tear Down
+09:25:56.595 INFO      Job              Interpreting JOB: Remove Date
+09:25:56.595 INFO      Job              Variable substitution found in Job JCL, now substituted
+09:25:56.595 INFO      CWCC Batch       Sending Job execution request to Host 
+09:26:08.188 INFO      CWCC Batch       Job execution completed with status:
+  Job status     : COMPLETED
+  Job status msg : Job HDDRXM0G(J0104825) ended with return code: 0004
+  Job name       : HDDRXM0G
+  Job id         : J0104825
+  Return code    : 0004
+  Abend code     : 
+  Abend reason   : 
+09:26:08.189 INFO      Job              Successfully executed job: Remove Date
+09:26:08.190 INFO      Scope            Scope completed
+09:26:08.191 INFO      Engine           Test Scenario execution ended

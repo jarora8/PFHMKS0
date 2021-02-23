@@ -1,0 +1,554 @@
+13:31:16.965 COMMENT   Engine           Test Scenario execution started
+13:31:16.965 INFO      Engine           Using context settings:
+  Engine Version       : 19.5.1
+  Environment id                : 5cee98c2d3142c1f90a4976d
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : cwcc.compuware.com
+  Server port                   : 16196
+  Job execution timeout seconds : 300
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : HDDRXM0
+13:31:16.965 INFO      Engine           Setting variables from context and context data extensions
+13:31:16.965 INFO      Engine             id: environmentId      value: 5cee98c2d3142c1f90a4976d
+13:31:16.965 INFO      Engine             id: environmentType    value: BATCH
+13:31:16.965 INFO      Engine             id: userId             value: HDDRXM0
+13:31:16.965 INFO      ReadRemoteFile   Interpreting ReadRemoteFile for fileName: HDDRXM0.DEMO.TTTFT.CWXTRPT.EXPECT.ORIG first record:10 number of records to read: 22
+13:31:16.965 INFO      ReadRemoteFile   Sending Read dataset request to Host 
+13:31:17.114 INFO      HCIClient        Creating job directory /u/xatester/hddrxm0/bf51c71d216c4a839929fd0119f63556
+13:31:20.564 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>HDDRXM0</userid><xpassword>XXX</xpassword><operation>IMPFILE</operation><runat>DAY</runat><loglevel>log</loglevel><encoding>EBCDIC</encoding><codepage>1047</codepage><jobdirectory>bf51c71d216c4a839929fd0119f63556</jobdirectory><outputfilepath>XAT_records.xml</outputfilepath><impfile><impdsn>HDDRXM0.DEMO.TTTFT.CWXTRPT.EXPECT.ORIG</impdsn><imptpl>XAT_template.xml</imptpl><impxml>XAT_records.xml</impxml><impmax>22</impmax><impskip>9</impskip></impfile></xatz_request></XATZREQ>
+13:31:20.976 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0780566</jobid><jobname>HDDRXM0I</jobname><starttime>20190906073120933</starttime></xatz_response></XATZRESP>
+13:31:20.976 LOG       HCIClient        Response received from Host. Message: JobId:J0780566
+13:31:20.976 INFO      HCIClient        Job has been started at host with JobId:J0780566
+13:31:20.976 INFO      CWCC Batch       Waiting for Execution Result from Host
+13:31:24.814 INFO      ReadRemoteFile   Records received, count= 15
+13:31:24.815 INFO      DataStore        Interpreting DataStore referencedId:rptFileDet filePath:report_file_expected_detail.xml
+13:31:24.816 LOG       DataStore        Data items found to be stored:
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>JOHN SMITH</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>NORTH</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>H</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>10</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>15</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>81</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>37</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1083.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>0.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>1083.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>ROY GARDNER</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>NORTH</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>12</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>31</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>92</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>26</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>750.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>3300.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>4050.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>DAN PEARSON</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>NORTH</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>7</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>20</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>89</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>30</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>850.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>1000.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>1850.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>MICHAEL DAYTON</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>SOUTH</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>8</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>30</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>82</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>37</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>825.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>6000.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>6825.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>DENNIS WHITE</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>SOUTH</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>2</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>29</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>88</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>31</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1050.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>1120.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>2170.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>VALERIE OLSEN</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>EAST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>5</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>1</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>94</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>25</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>900.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>5600.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>6500.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>LAURA MARTIN</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>EAST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>6</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>14</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>83</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>36</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1225.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>6000.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>7225.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>MARCIA SULLIVAN</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>EAST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>H</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>4</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>5</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>93</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>26</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1200.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>180.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>0.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>1380.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>JAMES MORRISON</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>EAST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>H</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>9</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>13</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>91</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>27</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1017.50</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>0.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>1017.50</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>THOMAS LONG</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>WEST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>H</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>3</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>31</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>87</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>32</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1000.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>0.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>1000.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>DONNA BROWN</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>WEST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>11</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>11</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>81</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>37</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1000.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>3333.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>4333.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>SAMUEL ADDAMS</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>WEST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>H</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>1</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>2</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>86</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>33</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1100.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>82.50</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>0.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>1182.50</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>MARK JOHNSON</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>WEST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>9</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>30</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>82</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>36</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>750.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>6000.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>6750.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name></emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region></emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type></emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>0</emp-dtl-hire-mm>
+    <emp-dtl-slash1></emp-dtl-slash1>
+    <emp-dtl-hire-dd>0</emp-dtl-hire-dd>
+    <emp-dtl-slash2></emp-dtl-slash2>
+    <emp-dtl-hire-yy>0</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>0</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages></emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot></emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm></emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total></emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>'   TOTAL'</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region></emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type></emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>0</emp-dtl-hire-mm>
+    <emp-dtl-slash1></emp-dtl-slash1>
+    <emp-dtl-hire-dd>0</emp-dtl-hire-dd>
+    <emp-dtl-slash2></emp-dtl-slash2>
+    <emp-dtl-hire-yy>0</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>0</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages></emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot></emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm></emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>45366.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+13:31:24.816 LOG       DataStore        Now saving to file:C:/Users/cwde-rnuesse/git/FTSDEMO_RXN3_Functional_Tests/CWXTCOB_Functional_Tests/Functional Test/report_file_expected_detail.xml
+13:31:24.820 INFO      ReadRemoteFile   Interpreting ReadRemoteFile for fileName: HDDRXM0.DEMO.TTTFT.CWXTRPT.EXPECT.ORIG first record:1 number of records to read: 100
+13:31:24.820 INFO      ReadRemoteFile   Sending Read dataset request to Host 
+13:31:25.487 INFO      HCIClient        Creating job directory /u/xatester/hddrxm0/2edbeb856faa49efb96e062b83ac2734
+13:31:26.824 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>HDDRXM0</userid><xpassword>XXX</xpassword><operation>IMPFILE</operation><runat>DAY</runat><loglevel>log</loglevel><encoding>EBCDIC</encoding><codepage>1047</codepage><jobdirectory>2edbeb856faa49efb96e062b83ac2734</jobdirectory><outputfilepath>XAT_records.xml</outputfilepath><impfile><impdsn>HDDRXM0.DEMO.TTTFT.CWXTRPT.EXPECT.ORIG</impdsn><imptpl>XAT_template.xml</imptpl><impxml>XAT_records.xml</impxml><impmax>100</impmax><impskip>0</impskip></impfile></xatz_request></XATZREQ>
+13:31:27.143 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0780567</jobid><jobname>HDDRXM0I</jobname><starttime>20190906073127092</starttime></xatz_response></XATZRESP>
+13:31:27.144 LOG       HCIClient        Response received from Host. Message: JobId:J0780567
+13:31:27.144 INFO      HCIClient        Job has been started at host with JobId:J0780567
+13:31:27.144 INFO      CWCC Batch       Waiting for Execution Result from Host
+13:31:30.808 INFO      ReadRemoteFile   Records received, count= 24
+13:31:30.808 INFO      DataStore        Interpreting DataStore referencedId:rptFileFull filePath:data.xml
+13:31:30.809 LOG       DataStore        Data items found to be stored:
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' RUN DATE  09/06/19       EMPLOYEE COMPENSATION REPORT                  PAGE   1'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>'                               HIRE  YRS OF'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' EMPLOYEE NAME   REGION TYPE   DATE  SERVICE  SALARY   O/T   COMMISSION    TOTAL'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' JOHN SMITH      NORTH   H   10/15/81   37   1083.00     0.00      0.00  1083.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' ROY GARDNER     NORTH   S   12/31/92   26    750.00     0.00   3300.00  4050.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' DAN PEARSON     NORTH   S   07/20/89   30    850.00     0.00   1000.00  1850.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' MICHAEL DAYTON  SOUTH   S   08/30/82   37    825.00     0.00   6000.00  6825.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' DENNIS WHITE    SOUTH   S   02/29/88   31   1050.00     0.00   1120.00  2170.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' VALERIE OLSEN   EAST    S   05/01/94   25    900.00     0.00   5600.00  6500.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' LAURA MARTIN    EAST    S   06/14/83   36   1225.00     0.00   6000.00  7225.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' MARCIA SULLIVAN EAST    H   04/05/93   26   1200.00   180.00      0.00  1380.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' JAMES MORRISON  EAST    H   09/13/91   27   1017.50     0.00      0.00  1017.50'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' THOMAS LONG     WEST    H   03/31/87   32   1000.00     0.00      0.00  1000.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' DONNA BROWN     WEST    S   11/11/81   37   1000.00     0.00   3333.00  4333.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' SAMUEL ADDAMS   WEST    H   01/02/86   33   1100.00    82.50      0.00  1182.50'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' MARK JOHNSON    WEST    S   09/30/82   36    750.00     0.00   6000.00  6750.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>'    TOTAL                                                               45366.00'</filler1>
+  </rpt-unformatted>
+</record>
+13:31:30.809 LOG       DataStore        Now saving to file:C:/Users/cwde-rnuesse/git/FTSDEMO_RXN3_Functional_Tests/CWXTCOB_Functional_Tests/Functional Test/data.xml
+13:31:30.811 COMMENT   Engine           Test Scenario execution ended

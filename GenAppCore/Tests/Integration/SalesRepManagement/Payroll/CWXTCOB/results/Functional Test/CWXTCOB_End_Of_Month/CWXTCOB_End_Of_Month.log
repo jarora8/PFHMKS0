@@ -1,0 +1,1858 @@
+15:40:56.390 COMMENT   Engine           Test Scenario execution started
+15:40:56.391 INFO      Engine           Using context settings:
+  Engine Version       : 19.5.1
+  Environment id                : 5cee98c2d3142c1f90a4976d
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : cwcc.compuware.com
+  Server port                   : 16196
+  Job execution timeout seconds : 300
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : HDDRXM0
+15:40:56.391 INFO      Engine           Setting variables from context and context data extensions
+15:40:56.391 INFO      Engine             id: environmentId      value: 5cee98c2d3142c1f90a4976d
+15:40:56.391 INFO      Engine             id: environmentType    value: BATCH
+15:40:56.391 INFO      Engine             id: userId             value: HDDRXM0
+15:40:56.392 INFO      Scope            Interpreting Scope name:Set Date
+15:40:56.392 INFO      Scope            Scope completed
+15:40:56.392 INFO      Scope            Interpreting Scope name:Initialize
+15:40:56.392 INFO      Scope            Interpreting Scope name:Variable Set Up
+15:40:56.392 INFO      Variable         Interpreting Variable id:empInDatasetNameHourly
+15:40:56.394 LOG       Variable         Resolved data:
+HDDRXM0.DEMO.TTTFT.CWXTDATA.HOURLY
+15:40:56.395 INFO      Variable         Interpreting Variable id:empInDatasetNameSales
+15:40:56.396 LOG       Variable         Resolved data:
+HDDRXM0.DEMO.TTTFT.CWXTDATA.SALES
+15:40:56.396 INFO      Variable         Interpreting Variable id:empInDatasetNameMgmt
+15:40:56.396 LOG       Variable         Resolved data:
+HDDRXM0.DEMO.TTTFT.CWXTDATA.MGMT
+15:40:56.396 INFO      Variable         Interpreting Variable id:outDatasetNameActual
+15:40:56.396 LOG       Variable         Resolved data:
+HDDRXM0.DEMO.TTTFT.CWXTRPT.EOM
+15:40:56.396 INFO      Variable         Interpreting Variable id:outDatasetNameExpected
+15:40:56.396 LOG       Variable         Resolved data:
+HDDRXM0.DEMO.TTTFT.CWXTRPT.EOM.EXPECT
+15:40:56.396 INFO      Variable         Interpreting Variable id:empInRecordsHourly dataFile:Input_Data/employee_input_file_hourly.xml
+15:40:56.399 LOG       Variable         Resolved data items from file Input_Data/employee_input_file_hourly.xml
+<record>
+  <employee-work-area>
+    <wa-emp-num>3431</wa-emp-num>
+    <wa-emp-type>H</wa-emp-type>
+    <wa-emp-region>2</wa-emp-region>
+    <wa-emp-name>Ralph Nuesse</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>123 NORTH AVE</wa-emp-street>
+      <wa-emp-city>PLANO</wa-emp-city>
+      <wa-emp-state>TX</wa-emp-state>
+      <wa-emp-zip>57010</wa-emp-zip>
+    </wa-emp-address>
+    <wa-hourly-employee-data>
+      <wa-emp-hours>40</wa-emp-hours>
+      <wa-emp-rate>28.5</wa-emp-rate>
+      <filler1></filler1>
+    </wa-hourly-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>84</wa-emp-hire-yy>
+      <wa-emp-hire-mm>6</wa-emp-hire-mm>
+      <wa-emp-hire-dd>25</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>2523</wa-emp-num>
+    <wa-emp-type>H</wa-emp-type>
+    <wa-emp-region>1</wa-emp-region>
+    <wa-emp-name>JOHN SMITH</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>5456 ELM STREET</wa-emp-street>
+      <wa-emp-city>WAYNE</wa-emp-city>
+      <wa-emp-state>IL</wa-emp-state>
+      <wa-emp-zip>77902</wa-emp-zip>
+    </wa-emp-address>
+    <wa-hourly-employee-data>
+      <wa-emp-hours>38</wa-emp-hours>
+      <wa-emp-rate>28.5</wa-emp-rate>
+      <filler1>' 1'</filler1>
+    </wa-hourly-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>81</wa-emp-hire-yy>
+      <wa-emp-hire-mm>10</wa-emp-hire-mm>
+      <wa-emp-hire-dd>15</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>1568</wa-emp-num>
+    <wa-emp-type>H</wa-emp-type>
+    <wa-emp-region>4</wa-emp-region>
+    <wa-emp-name>THOMAS LONG</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>12 RACE STREET</wa-emp-street>
+      <wa-emp-city>SAN JOSE</wa-emp-city>
+      <wa-emp-state>CA</wa-emp-state>
+      <wa-emp-zip>95126</wa-emp-zip>
+    </wa-emp-address>
+    <wa-hourly-employee-data>
+      <wa-emp-hours>45</wa-emp-hours>
+      <wa-emp-rate>25</wa-emp-rate>
+      <filler1></filler1>
+    </wa-hourly-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>87</wa-emp-hire-yy>
+      <wa-emp-hire-mm>3</wa-emp-hire-mm>
+      <wa-emp-hire-dd>31</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+15:40:56.399 INFO      Variable         Interpreting Variable id:empInRecordsSales dataFile:Input_Data/employee_input_file_sales.xml
+15:40:56.410 LOG       Variable         Resolved data items from file Input_Data/employee_input_file_sales.xml
+<record>
+  <employee-work-area>
+    <wa-emp-num>1431</wa-emp-num>
+    <wa-emp-type>S</wa-emp-type>
+    <wa-emp-region>1</wa-emp-region>
+    <wa-emp-name>TED NESSMAN</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>ONE COPLEY PL</wa-emp-street>
+      <wa-emp-city>BOSTON</wa-emp-city>
+      <wa-emp-state>MA</wa-emp-state>
+      <wa-emp-zip>87120</wa-emp-zip>
+    </wa-emp-address>
+    <wa-sales-employee-data>
+      <wa-sales-salary>1000</wa-sales-salary>
+      <wa-sales-amount>0</wa-sales-amount>
+      <filler1></filler1>
+    </wa-sales-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>79</wa-emp-hire-yy>
+      <wa-emp-hire-mm>1</wa-emp-hire-mm>
+      <wa-emp-hire-dd>30</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>2334</wa-emp-num>
+    <wa-emp-type>S</wa-emp-type>
+    <wa-emp-region>1</wa-emp-region>
+    <wa-emp-name>ROY GARDNER</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>323 OAK STREET</wa-emp-street>
+      <wa-emp-city>EDINA</wa-emp-city>
+      <wa-emp-state>MN</wa-emp-state>
+      <wa-emp-zip>23040</wa-emp-zip>
+    </wa-emp-address>
+    <wa-sales-employee-data>
+      <wa-sales-salary>750</wa-sales-salary>
+      <wa-sales-amount>55000</wa-sales-amount>
+      <filler1></filler1>
+    </wa-sales-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>92</wa-emp-hire-yy>
+      <wa-emp-hire-mm>12</wa-emp-hire-mm>
+      <wa-emp-hire-dd>31</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>6745</wa-emp-num>
+    <wa-emp-type>S</wa-emp-type>
+    <wa-emp-region>2</wa-emp-region>
+    <wa-emp-name>VALERIE OLSEN</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>720 RATZER ROAD</wa-emp-street>
+      <wa-emp-city>WAYNE</wa-emp-city>
+      <wa-emp-state>NJ</wa-emp-state>
+      <wa-emp-zip>87010</wa-emp-zip>
+    </wa-emp-address>
+    <wa-sales-employee-data>
+      <wa-sales-salary>900</wa-sales-salary>
+      <wa-sales-amount>70000</wa-sales-amount>
+      <filler1></filler1>
+    </wa-sales-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>94</wa-emp-hire-yy>
+      <wa-emp-hire-mm>5</wa-emp-hire-mm>
+      <wa-emp-hire-dd>1</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>765</wa-emp-num>
+    <wa-emp-type>S</wa-emp-type>
+    <wa-emp-region>3</wa-emp-region>
+    <wa-emp-name>DAN PEARSON</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>909 HIGHLAND</wa-emp-street>
+      <wa-emp-city>COLUMBUS</wa-emp-city>
+      <wa-emp-state>OH</wa-emp-state>
+      <wa-emp-zip>34111</wa-emp-zip>
+    </wa-emp-address>
+    <wa-sales-employee-data>
+      <wa-sales-salary>850</wa-sales-salary>
+      <wa-sales-amount>25000</wa-sales-amount>
+      <filler1></filler1>
+    </wa-sales-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>89</wa-emp-hire-yy>
+      <wa-emp-hire-mm>7</wa-emp-hire-mm>
+      <wa-emp-hire-dd>20</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>4147</wa-emp-num>
+    <wa-emp-type>S</wa-emp-type>
+    <wa-emp-region>4</wa-emp-region>
+    <wa-emp-name>LAURA MARTIN</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>TWO ENDERBY ST</wa-emp-street>
+      <wa-emp-city>BETHESDA</wa-emp-city>
+      <wa-emp-state>MD</wa-emp-state>
+      <wa-emp-zip>62045</wa-emp-zip>
+    </wa-emp-address>
+    <wa-sales-employee-data>
+      <wa-sales-salary>1225</wa-sales-salary>
+      <wa-sales-amount>75000</wa-sales-amount>
+      <filler1></filler1>
+    </wa-sales-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>83</wa-emp-hire-yy>
+      <wa-emp-hire-mm>6</wa-emp-hire-mm>
+      <wa-emp-hire-dd>14</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>959</wa-emp-num>
+    <wa-emp-type>S</wa-emp-type>
+    <wa-emp-region>4</wa-emp-region>
+    <wa-emp-name>DONNA BROWN</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>3 SAN THOMAS</wa-emp-street>
+      <wa-emp-city>CAMPBELL</wa-emp-city>
+      <wa-emp-state>CA</wa-emp-state>
+      <wa-emp-zip>95133</wa-emp-zip>
+    </wa-emp-address>
+    <wa-sales-employee-data>
+      <wa-sales-salary>1000</wa-sales-salary>
+      <wa-sales-amount>55550</wa-sales-amount>
+      <filler1></filler1>
+    </wa-sales-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>81</wa-emp-hire-yy>
+      <wa-emp-hire-mm>11</wa-emp-hire-mm>
+      <wa-emp-hire-dd>11</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>2010</wa-emp-num>
+    <wa-emp-type>S</wa-emp-type>
+    <wa-emp-region>2</wa-emp-region>
+    <wa-emp-name>MICHAEL DAYTON</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>11 UNION STREET</wa-emp-street>
+      <wa-emp-city>ORLANDO</wa-emp-city>
+      <wa-emp-state>FL</wa-emp-state>
+      <wa-emp-zip>18222</wa-emp-zip>
+    </wa-emp-address>
+    <wa-sales-employee-data>
+      <wa-sales-salary>825</wa-sales-salary>
+      <wa-sales-amount>75000</wa-sales-amount>
+      <filler1></filler1>
+    </wa-sales-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>82</wa-emp-hire-yy>
+      <wa-emp-hire-mm>8</wa-emp-hire-mm>
+      <wa-emp-hire-dd>30</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>5213</wa-emp-num>
+    <wa-emp-type>S</wa-emp-type>
+    <wa-emp-region>2</wa-emp-region>
+    <wa-emp-name>DENNIS WHITE</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>47 CARROLL PL</wa-emp-street>
+      <wa-emp-city>MIAMI</wa-emp-city>
+      <wa-emp-state>FL</wa-emp-state>
+      <wa-emp-zip>87021</wa-emp-zip>
+    </wa-emp-address>
+    <wa-sales-employee-data>
+      <wa-sales-salary>1050</wa-sales-salary>
+      <wa-sales-amount>28000</wa-sales-amount>
+      <filler1></filler1>
+    </wa-sales-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>88</wa-emp-hire-yy>
+      <wa-emp-hire-mm>2</wa-emp-hire-mm>
+      <wa-emp-hire-dd>29</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>3215</wa-emp-num>
+    <wa-emp-type>S</wa-emp-type>
+    <wa-emp-region>4</wa-emp-region>
+    <wa-emp-name>MARK JOHNSON</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>12 HOBART ROAD</wa-emp-street>
+      <wa-emp-city>PHOENIX</wa-emp-city>
+      <wa-emp-state>AZ</wa-emp-state>
+      <wa-emp-zip>31234</wa-emp-zip>
+    </wa-emp-address>
+    <wa-sales-employee-data>
+      <wa-sales-salary>750</wa-sales-salary>
+      <wa-sales-amount>75000</wa-sales-amount>
+      <filler1></filler1>
+    </wa-sales-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>82</wa-emp-hire-yy>
+      <wa-emp-hire-mm>9</wa-emp-hire-mm>
+      <wa-emp-hire-dd>30</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+15:40:56.410 INFO      Variable         Interpreting Variable id:empInRecordsMgmt dataFile:Input_Data/employee_input_file_mgmt.xml
+15:40:56.416 LOG       Variable         Resolved data items from file Input_Data/employee_input_file_mgmt.xml
+<record>
+  <employee-work-area>
+    <wa-emp-num>2136</wa-emp-num>
+    <wa-emp-type>M</wa-emp-type>
+    <wa-emp-region>4</wa-emp-region>
+    <wa-emp-name>SAM MILLS</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>13 SUTTON BLVD</wa-emp-street>
+      <wa-emp-city>WALNUT</wa-emp-city>
+      <wa-emp-state>CA</wa-emp-state>
+      <wa-emp-zip>90066</wa-emp-zip>
+    </wa-emp-address>
+    <wa-mgmt-employee-data>
+      <wa-mgmt-salary>1250</wa-mgmt-salary>
+      <filler1></filler1>
+    </wa-mgmt-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>90</wa-emp-hire-yy>
+      <wa-emp-hire-mm>3</wa-emp-hire-mm>
+      <wa-emp-hire-dd>17</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>887</wa-emp-num>
+    <wa-emp-type>M</wa-emp-type>
+    <wa-emp-region>1</wa-emp-region>
+    <wa-emp-name>KATHY DETT</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>888 SHARON LANE</wa-emp-street>
+      <wa-emp-city>DETROIT</wa-emp-city>
+      <wa-emp-state>MI</wa-emp-state>
+      <wa-emp-zip>48045</wa-emp-zip>
+    </wa-emp-address>
+    <wa-mgmt-employee-data>
+      <wa-mgmt-salary>1500</wa-mgmt-salary>
+      <filler1></filler1>
+    </wa-mgmt-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>85</wa-emp-hire-yy>
+      <wa-emp-hire-mm>6</wa-emp-hire-mm>
+      <wa-emp-hire-dd>21</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>1318</wa-emp-num>
+    <wa-emp-type>M</wa-emp-type>
+    <wa-emp-region>2</wa-emp-region>
+    <wa-emp-name>AUDREY CLARK</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>10 LAKE STREET</wa-emp-street>
+      <wa-emp-city>HOUSTON</wa-emp-city>
+      <wa-emp-state>TX</wa-emp-state>
+      <wa-emp-zip>87010</wa-emp-zip>
+    </wa-emp-address>
+    <wa-mgmt-employee-data>
+      <wa-mgmt-salary>1125</wa-mgmt-salary>
+      <filler1></filler1>
+    </wa-mgmt-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>80</wa-emp-hire-yy>
+      <wa-emp-hire-mm>10</wa-emp-hire-mm>
+      <wa-emp-hire-dd>7</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+<record>
+  <employee-work-area>
+    <wa-emp-num>1189</wa-emp-num>
+    <wa-emp-type>M</wa-emp-type>
+    <wa-emp-region>3</wa-emp-region>
+    <wa-emp-name>KAREN JOHNSON</wa-emp-name>
+    <wa-emp-address>
+      <wa-emp-street>5500 PARK AVE</wa-emp-street>
+      <wa-emp-city>NEW YORK</wa-emp-city>
+      <wa-emp-state>NY</wa-emp-state>
+      <wa-emp-zip>10012</wa-emp-zip>
+    </wa-emp-address>
+    <wa-mgmt-employee-data>
+      <wa-mgmt-salary>2000</wa-mgmt-salary>
+      <filler1></filler1>
+    </wa-mgmt-employee-data>
+    <wa-emp-hire-date>
+      <wa-emp-hire-yy>76</wa-emp-hire-yy>
+      <wa-emp-hire-mm>12</wa-emp-hire-mm>
+      <wa-emp-hire-dd>1</wa-emp-hire-dd>
+    </wa-emp-hire-date>
+    <filler1></filler1>
+  </employee-work-area>
+</record>
+15:40:56.417 INFO      Variable         Interpreting Variable id:rptExpectedDetailRecords dataFile:Output_Data/report_file_expected_detail.xml
+15:40:56.438 LOG       Variable         Resolved data items from file Output_Data/report_file_expected_detail.xml
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>JOHN SMITH</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>NORTH</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>H</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>10</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>15</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>81</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>37</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1083.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>0.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>1083.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>ROY GARDNER</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>NORTH</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>12</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>31</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>92</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>26</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>750.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>3300.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>4050.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>DAN PEARSON</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>NORTH</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>7</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>20</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>89</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>30</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>850.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>1000.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>1850.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>MICHAEL DAYTON</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>SOUTH</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>8</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>30</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>82</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>37</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>825.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>6000.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>6825.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>DENNIS WHITE</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>SOUTH</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>2</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>29</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>88</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>31</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1050.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>1120.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>2170.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>VALERIE OLSEN</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>EAST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>5</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>1</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>94</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>25</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>900.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>5600.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>6500.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>LAURA MARTIN</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>EAST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>6</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>14</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>83</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>36</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1225.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>6000.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>7225.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>MARCIA SULLIVAN</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>EAST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>H</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>4</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>5</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>93</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>26</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1200.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>180.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>0.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>1380.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>JAMES MORRISON</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>EAST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>H</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>9</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>13</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>91</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>27</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1017.50</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>0.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>1017.50</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>THOMAS LONG</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>WEST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>H</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>3</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>31</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>87</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>32</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1000.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>0.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>1000.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>DONNA BROWN</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>WEST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>11</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>11</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>81</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>37</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1000.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>3333.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>4333.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>SAMUEL ADDAMS</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>WEST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>H</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>1</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>2</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>86</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>33</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>1100.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>82.50</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>0.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>1182.50</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>MARK JOHNSON</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region>WEST</emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type>S</emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>9</emp-dtl-hire-mm>
+    <emp-dtl-slash1>/</emp-dtl-slash1>
+    <emp-dtl-hire-dd>30</emp-dtl-hire-dd>
+    <emp-dtl-slash2>/</emp-dtl-slash2>
+    <emp-dtl-hire-yy>82</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>36</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages>750.00</emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot>0.00</emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm>6000.00</emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>6750.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name></emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region></emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type></emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>0</emp-dtl-hire-mm>
+    <emp-dtl-slash1></emp-dtl-slash1>
+    <emp-dtl-hire-dd>0</emp-dtl-hire-dd>
+    <emp-dtl-slash2></emp-dtl-slash2>
+    <emp-dtl-hire-yy>0</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>0</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages></emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot></emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm></emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total></emp-dtl-total>
+  </employee-dtl>
+</record>
+<record>
+  <employee-dtl>
+    <filler1></filler1>
+    <emp-dtl-name>'   TOTAL'</emp-dtl-name>
+    <filler2></filler2>
+    <emp-dtl-region></emp-dtl-region>
+    <filler3></filler3>
+    <emp-dtl-type></emp-dtl-type>
+    <filler4></filler4>
+    <emp-dtl-hire-mm>0</emp-dtl-hire-mm>
+    <emp-dtl-slash1></emp-dtl-slash1>
+    <emp-dtl-hire-dd>0</emp-dtl-hire-dd>
+    <emp-dtl-slash2></emp-dtl-slash2>
+    <emp-dtl-hire-yy>0</emp-dtl-hire-yy>
+    <filler5></filler5>
+    <emp-dtl-yrs-of-service>0</emp-dtl-yrs-of-service>
+    <filler6></filler6>
+    <emp-dtl-wages></emp-dtl-wages>
+    <filler7></filler7>
+    <emp-dtl-ot></emp-dtl-ot>
+    <filler8></filler8>
+    <emp-dtl-comm></emp-dtl-comm>
+    <filler9></filler9>
+    <emp-dtl-total>45366.00</emp-dtl-total>
+  </employee-dtl>
+</record>
+15:40:56.440 INFO      Variable         Interpreting Variable id:rptExpectedFullRecords dataFile:Output_Data/report_file_expected_unformatted.xml
+15:40:56.443 LOG       Variable         Resolved data items from file Output_Data/report_file_expected_unformatted.xml
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' RUN DATE  09/06/19       EMPLOYEE COMPENSATION REPORT                  PAGE   1'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>'                               HIRE  YRS OF'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' EMPLOYEE NAME   REGION TYPE   DATE  SERVICE  SALARY   O/T   COMMISSION    TOTAL'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' JOHN SMITH      NORTH   H   10/15/81   37   1083.00     0.00      0.00  1083.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' ROY GARDNER     NORTH   S   12/31/92   26    750.00     0.00   3300.00  4050.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' DAN PEARSON     NORTH   S   07/20/89   30    850.00     0.00   1000.00  1850.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' MICHAEL DAYTON  SOUTH   S   08/30/82   37    825.00     0.00   6000.00  6825.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' DENNIS WHITE    SOUTH   S   02/29/88   31   1050.00     0.00   1120.00  2170.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' VALERIE OLSEN   EAST    S   05/01/94   25    900.00     0.00   5600.00  6500.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' LAURA MARTIN    EAST    S   06/14/83   36   1225.00     0.00   6000.00  7225.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' MARCIA SULLIVAN EAST    H   04/05/93   26   1200.00   180.00      0.00  1380.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' JAMES MORRISON  EAST    H   09/13/91   27   1017.50     0.00      0.00  1017.50'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' THOMAS LONG     WEST    H   03/31/87   32   1000.00     0.00      0.00  1000.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' DONNA BROWN     WEST    S   11/11/81   37   1000.00     0.00   3333.00  4333.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' SAMUEL ADDAMS   WEST    H   01/02/86   33   1100.00    82.50      0.00  1182.50'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>' MARK JOHNSON    WEST    S   09/30/82   36    750.00     0.00   6000.00  6750.00'</filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1></filler1>
+  </rpt-unformatted>
+</record>
+<record>
+  <rpt-unformatted>
+    <filler1>'    TOTAL                                                               45366.00'</filler1>
+  </rpt-unformatted>
+</record>
+15:40:56.443 INFO      Scope            Scope completed
+15:40:56.443 INFO      Scope            Interpreting Scope name:Dataset Setup
+15:40:56.443 INFO      WriteRemoteFile  Interpreting WriteRemoteFile
+15:40:56.443 INFO      WriteRemoteFile  Variable substitution found in fileName name
+15:40:56.444 INFO      WriteRemoteFile  Actual fileName name is now:HDDRXM0.DEMO.TTTFT.CWXTDATA.HOURLY
+15:40:56.444 INFO      WriteRemoteFile  Finding referenced records from the id: empInRecordsHourly
+15:40:56.444 LOG       WriteRemoteFile  Verifies that records conform to the MDataDefinition
+15:40:56.444 INFO      WriteRemoteFile  Number of records to write:3
+15:40:56.444 INFO      WriteRemoteFile    File name             : HDDRXM0.DEMO.TTTFT.CWXTDATA.HOURLY
+15:40:56.445 INFO      WriteRemoteFile    Record length         : 80
+15:40:56.445 INFO      WriteRemoteFile    Record format         : FB
+15:40:56.445 INFO      WriteRemoteFile    Block size            : 27920
+15:40:56.445 INFO      WriteRemoteFile    Volumn name           : PCC006
+15:40:56.445 INFO      WriteRemoteFile    Unit name             : 
+15:40:56.445 INFO      WriteRemoteFile    Unit type             : TRK
+15:40:56.445 INFO      WriteRemoteFile    Primary allocation    : 5
+15:40:56.445 INFO      WriteRemoteFile    Secondary allocation  : 5
+15:40:56.445 INFO      WriteRemoteFile    Directory block count : 0
+15:40:56.445 INFO      WriteRemoteFile    Dataset type          : NONE
+15:40:56.445 INFO      WriteRemoteFile    Disposition           : New
+15:40:56.477 INFO      WriteRemoteFile  Sending Write dataset request to Host 
+15:40:57.722 INFO      HCIClient        Creating job directory /u/xatester/hddrxm0/c5ecf36088ef4bf9b6a087a3fc408e99
+15:41:02.043 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>HDDRXM0</userid><xpassword>XXX</xpassword><operation>EXPFILE</operation><runat>DAY</runat><loglevel>log</loglevel><encoding>EBCDIC</encoding><codepage>1047</codepage><jobdirectory>c5ecf36088ef4bf9b6a087a3fc408e99</jobdirectory><outputfilepath>XAT_records.xml</outputfilepath><expfiles><expfile><expdsn>HDDRXM0.DEMO.TTTFT.CWXTDATA.HOURLY</expdsn><expxml>XAT_records.xml</expxml><explrl>80</explrl><expblk>27920</expblk><expvol>PCC006</expvol><expsun>TRK</expsun><expprm>5</expprm><expsec>5</expsec><expmem /><expdis>New</expdis><exprfm>FB</exprfm></expfile></expfiles></xatz_request></XATZREQ>
+15:41:02.725 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0784666</jobid><jobname>HDDRXM0X</jobname><starttime>20190918094102656</starttime></xatz_response></XATZRESP>
+15:41:02.726 LOG       HCIClient        Response received from Host. Message: JobId:J0784666
+15:41:02.726 INFO      HCIClient        Job has been started at host with JobId:J0784666
+15:41:02.726 INFO      CWCC Batch       Waiting for Execution Result from Host
+15:41:05.901 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>HDDRXM0</userid><xpassword>XXX</xpassword><operation>JOBINFO</operation><runat>DAY</runat><jobid>J0784666</jobid></xatz_request></XATZREQ>
+15:41:06.445 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0000</resultcode><resultmessage>Job information successfully returned</resultmessage><jobid /><responsedata><job><name>HDDRXM0X</name><status>ACTIVE</status><returncode>           </returncode><steps></steps></job></responsedata></xatz_response></XATZRESP>
+15:41:06.445 LOG       HCIClient        Response received from Host. Message:Job information successfully returned JobId:
+15:41:09.974 INFO      WriteRemoteFile  Write dataset request completed
+15:41:09.974 INFO      WriteRemoteFile  Interpreting WriteRemoteFile
+15:41:09.974 INFO      WriteRemoteFile  Variable substitution found in fileName name
+15:41:09.974 INFO      WriteRemoteFile  Actual fileName name is now:HDDRXM0.DEMO.TTTFT.CWXTDATA.SALES
+15:41:09.974 INFO      WriteRemoteFile  Finding referenced records from the id: empInRecordsSales
+15:41:09.974 LOG       WriteRemoteFile  Verifies that records conform to the MDataDefinition
+15:41:09.975 INFO      WriteRemoteFile  Number of records to write:9
+15:41:09.975 INFO      WriteRemoteFile    File name             : HDDRXM0.DEMO.TTTFT.CWXTDATA.SALES
+15:41:09.975 INFO      WriteRemoteFile    Record length         : 80
+15:41:09.975 INFO      WriteRemoteFile    Record format         : FB
+15:41:09.975 INFO      WriteRemoteFile    Block size            : 27920
+15:41:09.975 INFO      WriteRemoteFile    Volumn name           : PCC006
+15:41:09.975 INFO      WriteRemoteFile    Unit name             : 
+15:41:09.975 INFO      WriteRemoteFile    Unit type             : TRK
+15:41:09.975 INFO      WriteRemoteFile    Primary allocation    : 5
+15:41:09.975 INFO      WriteRemoteFile    Secondary allocation  : 5
+15:41:09.975 INFO      WriteRemoteFile    Directory block count : 0
+15:41:09.975 INFO      WriteRemoteFile    Dataset type          : NONE
+15:41:09.975 INFO      WriteRemoteFile    Disposition           : New
+15:41:09.975 INFO      WriteRemoteFile  Sending Write dataset request to Host 
+15:41:10.633 INFO      HCIClient        Creating job directory /u/xatester/hddrxm0/150465ca4070474bb2dbfa76beb74cf2
+15:41:15.220 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>HDDRXM0</userid><xpassword>XXX</xpassword><operation>EXPFILE</operation><runat>DAY</runat><loglevel>log</loglevel><encoding>EBCDIC</encoding><codepage>1047</codepage><jobdirectory>150465ca4070474bb2dbfa76beb74cf2</jobdirectory><outputfilepath>XAT_records.xml</outputfilepath><expfiles><expfile><expdsn>HDDRXM0.DEMO.TTTFT.CWXTDATA.SALES</expdsn><expxml>XAT_records.xml</expxml><explrl>80</explrl><expblk>27920</expblk><expvol>PCC006</expvol><expsun>TRK</expsun><expprm>5</expprm><expsec>5</expsec><expmem /><expdis>New</expdis><exprfm>FB</exprfm></expfile></expfiles></xatz_request></XATZREQ>
+15:41:15.936 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0784668</jobid><jobname>HDDRXM0X</jobname><starttime>20190918094115924</starttime></xatz_response></XATZRESP>
+15:41:15.936 LOG       HCIClient        Response received from Host. Message: JobId:J0784668
+15:41:15.936 INFO      HCIClient        Job has been started at host with JobId:J0784668
+15:41:15.936 INFO      CWCC Batch       Waiting for Execution Result from Host
+15:41:19.381 INFO      WriteRemoteFile  Write dataset request completed
+15:41:19.382 INFO      WriteRemoteFile  Interpreting WriteRemoteFile
+15:41:19.382 INFO      WriteRemoteFile  Variable substitution found in fileName name
+15:41:19.382 INFO      WriteRemoteFile  Actual fileName name is now:HDDRXM0.DEMO.TTTFT.CWXTDATA.MGMT
+15:41:19.382 INFO      WriteRemoteFile  Finding referenced records from the id: empInRecordsMgmt
+15:41:19.382 LOG       WriteRemoteFile  Verifies that records conform to the MDataDefinition
+15:41:19.382 INFO      WriteRemoteFile  Number of records to write:4
+15:41:19.382 INFO      WriteRemoteFile    File name             : HDDRXM0.DEMO.TTTFT.CWXTDATA.MGMT
+15:41:19.382 INFO      WriteRemoteFile    Record length         : 80
+15:41:19.382 INFO      WriteRemoteFile    Record format         : FB
+15:41:19.382 INFO      WriteRemoteFile    Block size            : 27920
+15:41:19.382 INFO      WriteRemoteFile    Volumn name           : PCC006
+15:41:19.382 INFO      WriteRemoteFile    Unit name             : 
+15:41:19.382 INFO      WriteRemoteFile    Unit type             : TRK
+15:41:19.382 INFO      WriteRemoteFile    Primary allocation    : 5
+15:41:19.382 INFO      WriteRemoteFile    Secondary allocation  : 5
+15:41:19.382 INFO      WriteRemoteFile    Directory block count : 0
+15:41:19.382 INFO      WriteRemoteFile    Dataset type          : NONE
+15:41:19.382 INFO      WriteRemoteFile    Disposition           : New
+15:41:19.382 INFO      WriteRemoteFile  Sending Write dataset request to Host 
+15:41:20.047 INFO      HCIClient        Creating job directory /u/xatester/hddrxm0/7c9baacf4ce048b9b5729ce71a8abea1
+15:41:23.859 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>HDDRXM0</userid><xpassword>XXX</xpassword><operation>EXPFILE</operation><runat>DAY</runat><loglevel>log</loglevel><encoding>EBCDIC</encoding><codepage>1047</codepage><jobdirectory>7c9baacf4ce048b9b5729ce71a8abea1</jobdirectory><outputfilepath>XAT_records.xml</outputfilepath><expfiles><expfile><expdsn>HDDRXM0.DEMO.TTTFT.CWXTDATA.MGMT</expdsn><expxml>XAT_records.xml</expxml><explrl>80</explrl><expblk>27920</expblk><expvol>PCC006</expvol><expsun>TRK</expsun><expprm>5</expprm><expsec>5</expsec><expmem /><expdis>New</expdis><exprfm>FB</exprfm></expfile></expfiles></xatz_request></XATZREQ>
+15:41:24.433 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0784669</jobid><jobname>HDDRXM0X</jobname><starttime>20190918094124344</starttime></xatz_response></XATZRESP>
+15:41:24.433 LOG       HCIClient        Response received from Host. Message: JobId:J0784669
+15:41:24.433 INFO      HCIClient        Job has been started at host with JobId:J0784669
+15:41:24.433 INFO      CWCC Batch       Waiting for Execution Result from Host
+15:41:27.880 INFO      WriteRemoteFile  Write dataset request completed
+15:41:27.880 INFO      Scope            Scope completed
+15:41:27.880 INFO      Scope            Scope completed
+15:41:27.880 INFO      Scope            Interpreting Scope name:Execute Test and Verify
+15:41:27.880 INFO      Component        Interpreting Component: CWXTCOB program:CWXTCOB
+15:41:27.880 INFO      Component        Using setup JCL for execution
+15:41:27.880 INFO      Component          Variable substitution found in setup JCL, now substituted
+15:41:27.880 INFO      Component          JCL for setup:
+//EMPFILE DD DISP=SHR,
+//  DSN=HDDRXM0.DEMO.TTTFT.CWXTDATA.HOURLY
+//        DD DISP=SHR,
+//  DSN=HDDRXM0.DEMO.TTTFT.CWXTDATA.SALES
+//        DD DISP=SHR,
+//  DSN=HDDRXM0.DEMO.TTTFT.CWXTDATA.MGMT
+//RPTFILE DD DISP=SHR,
+//  DSN=HDDRXM0.DEMO.TTTFT.CWXTRPT.EOM
+15:41:27.886 LOG       CWCC Batch       Final JCL setup for the component:
+//EMPFILE DD DISP=SHR,
+//  DSN=HDDRXM0.DEMO.TTTFT.CWXTDATA.HOURLY
+//        DD DISP=SHR,
+//  DSN=HDDRXM0.DEMO.TTTFT.CWXTDATA.SALES
+//        DD DISP=SHR,
+//  DSN=HDDRXM0.DEMO.TTTFT.CWXTDATA.MGMT
+//RPTFILE DD DISP=SHR,
+//  DSN=HDDRXM0.DEMO.TTTFT.CWXTRPT.EOM
+//RPTFILE DD DISP=SHR,DSN=HDDRXM0.DEMO.CWXTRPT
+
+15:41:27.887 LOG       CWCC Batch       Component Runtime Settings:
+15:41:27.887 LOG       CWCC Batch         Load library              :SALESSUP.RXN3.DEV1.LOAD
+15:41:27.887 LOG       CWCC Batch         Additional load libraries :SALESSUP.RXN3.QA1.LOAD,SALESSUP.RXN3.STG.LOAD,SALESSUP.RXN3.PRD.LOAD
+15:41:27.887 LOG       CWCC Batch         Listing libraries         :
+15:41:27.887 LOG       CWCC Batch         SysDebug libraries        :
+15:41:27.887 LOG       CWCC Batch         DB2 Subsystem ID          :
+15:41:27.887 LOG       CWCC Batch         DB2 plan                  :
+15:41:27.887 LOG       CWCC Batch         Call interface            :NONE
+15:41:27.887 LOG       CWCC Batch         Debugger type             :NONE
+15:41:27.887 LOG       CWCC Batch         Component type            :COBOL
+15:41:27.888 INFO      CWCC Batch       Sending Module execution request to Host for module:CWXTCOB rollback:false
+15:41:28.577 INFO      HCIClient        Creating job directory /u/xatester/hddrxm0/a7886640ecfc4661af4bb5780b9f863d
+15:41:28.871 LOG       CWCC Batch       Uploading input data for module CWXTCOB
+15:41:30.070 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>HDDRXM0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>log</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>BATCH</runtime><callinterface /><applid /><db2plan /><db2id /><rollback>false</rollback><jobdirectory>a7886640ecfc4661af4bb5780b9f863d</jobdirectory><amode24>false</amode24><members><membername>CWXTCOB</membername></members><loads><mainload>SALESSUP.RXN3.DEV1.LOAD</mainload><load>SALESSUP.RXN3.QA1.LOAD</load><load>SALESSUP.RXN3.STG.LOAD</load><load>SALESSUP.RXN3.PRD.LOAD</load></loads><codepage>1047</codepage><lang>COBOL</lang><refs><ref>//EMPFILE DD DISP=SHR,</ref><ref>//  DSN=HDDRXM0.DEMO.TTTFT.CWXTDATA.HOURLY</ref><ref>//        DD DISP=SHR,</ref><ref>//  DSN=HDDRXM0.DEMO.TTTFT.CWXTDATA.SALES</ref><ref>//        DD DISP=SHR,</ref><ref>//  DSN=HDDRXM0.DEMO.TTTFT.CWXTDATA.MGMT</ref><ref>//RPTFILE DD DISP=SHR,</ref><ref>//  DSN=HDDRXM0.DEMO.TTTFT.CWXTRPT.EOM</ref><ref>//RPTFILE DD DISP=SHR,DSN=HDDRXM0.DEMO.CWXTRPT</ref></refs></xatz_request></XATZREQ>
+15:41:30.578 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0784670</jobid><jobname>HDDRXM0E</jobname><starttime>20190918094130551</starttime></xatz_response></XATZRESP>
+15:41:30.578 LOG       HCIClient        Response received from Host. Message: JobId:J0784670
+15:41:30.578 INFO      HCIClient        Job has been started at host with JobId:J0784670
+15:41:30.578 INFO      CWCC Batch       Waiting for Execution Result from Host
+15:41:33.989 INFO      CWCC Batch       Component completed with program exit: +0
+15:41:34.220 LOG       CWCC Batch       Setting execution variable 'jobid' to J0784670
+15:41:34.220 LOG       CWCC Batch       Setting execution variable 'programexit' to 0
+15:41:34.398 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
+15:41:34.877 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+15:41:34.877 INFO      Component        Finished interpreting Component: CWXTCOB program:CWXTCOB
+15:41:34.877 INFO      ReadRemoteFile   Interpreting ReadRemoteFile for fileName: ${outDatasetNameActual} first record:10 number of records to read: 12
+15:41:34.877 INFO      ReadRemoteFile     Variable substitution found in file name
+15:41:34.877 INFO      ReadRemoteFile     File name is now:HDDRXM0.DEMO.TTTFT.CWXTRPT.EOM
+15:41:34.879 INFO      ReadRemoteFile   Sending Read dataset request to Host 
+15:41:35.564 INFO      HCIClient        Creating job directory /u/xatester/hddrxm0/75692fa475204607822bd3db40e86624
+15:41:39.454 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>HDDRXM0</userid><xpassword>XXX</xpassword><operation>IMPFILE</operation><runat>DAY</runat><loglevel>log</loglevel><encoding>EBCDIC</encoding><codepage>1047</codepage><jobdirectory>75692fa475204607822bd3db40e86624</jobdirectory><outputfilepath>XAT_records.xml</outputfilepath><impfile><impdsn>HDDRXM0.DEMO.TTTFT.CWXTRPT.EOM</impdsn><imptpl>XAT_template.xml</imptpl><impxml>XAT_records.xml</impxml><impmax>12</impmax><impskip>9</impskip></impfile></xatz_request></XATZREQ>
+15:41:40.153 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0784671</jobid><jobname>HDDRXM0I</jobname><starttime>20190918094139994</starttime></xatz_response></XATZRESP>
+15:41:40.154 LOG       HCIClient        Response received from Host. Message: JobId:J0784671
+15:41:40.154 INFO      HCIClient        Job has been started at host with JobId:J0784671
+15:41:40.154 INFO      CWCC Batch       Waiting for Execution Result from Host
+15:41:44.057 INFO      ReadRemoteFile   Records received, count= 12
+15:41:44.058 INFO      IterateData      Interpreting IterateData id: loopThroughOutput. Number of data iterations: 12. Variable loopThroughOutputIndex contains iteration number
+15:41:44.058 INFO      IterateData      Iteration number 0 started.
+15:41:44.058 LOG       IterateData      Iteration Data:
+<record xmlns="http://www.xact.dk/xatester/v/1">
+  <employee_dtl>
+    <filler1>' J'</filler1>
+    <emp_dtl_name>OHN SMITH</emp_dtl_name>
+    <filler2>N</filler2>
+    <emp_dtl_region>ORTH</emp_dtl_region>
+    <filler3>'  H'</filler3>
+    <emp_dtl_type></emp_dtl_type>
+    <filler4>'  1'</filler4>
+    <emp_dtl_hire_mm>0</emp_dtl_hire_mm>
+    <emp_dtl_slash1>1</emp_dtl_slash1>
+    <emp_dtl_hire_dd>0</emp_dtl_hire_dd>
+    <emp_dtl_slash2>8</emp_dtl_slash2>
+    <emp_dtl_hire_yy>0</emp_dtl_hire_yy>
+    <filler5>'  3'</filler5>
+    <emp_dtl_yrs_of_service>0</emp_dtl_yrs_of_service>
+    <filler6></filler6>
+    <emp_dtl_wages>1083.00</emp_dtl_wages>
+    <filler7></filler7>
+    <emp_dtl_ot>0.00</emp_dtl_ot>
+    <filler8></filler8>
+    <emp_dtl_comm>0.00</emp_dtl_comm>
+    <filler9></filler9>
+    <emp_dtl_total>1083.00</emp_dtl_total>
+  </employee_dtl>
+</record>
+15:41:44.059 INFO      Variable         Interpreting Variable id:expectTotal
+15:41:44.059 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:44.247 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:44.309 LOG       Expression       Expression evaluated to:1083.00
+15:41:44.309 LOG       Variable         Resolved data:
+1083.00
+15:41:44.309 INFO      Expression       Interpreting Expression:expectTotal
+15:41:44.536 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+expectTotal
+15:41:44.540 LOG       Expression       Expression evaluated to:1083.00
+15:41:44.540 COMMENT   Log              Expect Total:1083.00
+15:41:44.540 INFO      Expression       Interpreting Expression:loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:44.665 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:44.678 LOG       Expression       Expression evaluated to:1083.00
+15:41:44.678 COMMENT   Log              Actual Total:1083.00
+15:41:44.678 INFO      Verify           Interpreting Verify component name:Total
+15:41:44.678 INFO      Verify           Using verify expression:loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:44.824 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:44.834 LOG       Verify           Expression returned:
+true
+15:41:44.834 INFO      IterateData      Iteration number 1 started.
+15:41:44.835 LOG       IterateData      Iteration Data:
+<record xmlns="http://www.xact.dk/xatester/v/1">
+  <employee_dtl>
+    <filler1>' T'</filler1>
+    <emp_dtl_name>ED NESSMAN</emp_dtl_name>
+    <filler2>N</filler2>
+    <emp_dtl_region>ORTH</emp_dtl_region>
+    <filler3>'  S'</filler3>
+    <emp_dtl_type></emp_dtl_type>
+    <filler4>'  0'</filler4>
+    <emp_dtl_hire_mm>0</emp_dtl_hire_mm>
+    <emp_dtl_slash1>3</emp_dtl_slash1>
+    <emp_dtl_hire_dd>0</emp_dtl_hire_dd>
+    <emp_dtl_slash2>7</emp_dtl_slash2>
+    <emp_dtl_hire_yy>0</emp_dtl_hire_yy>
+    <filler5>'  4'</filler5>
+    <emp_dtl_yrs_of_service>0</emp_dtl_yrs_of_service>
+    <filler6></filler6>
+    <emp_dtl_wages>1000.00</emp_dtl_wages>
+    <filler7></filler7>
+    <emp_dtl_ot>0.00</emp_dtl_ot>
+    <filler8></filler8>
+    <emp_dtl_comm>0.00</emp_dtl_comm>
+    <filler9></filler9>
+    <emp_dtl_total>1000.00</emp_dtl_total>
+  </employee_dtl>
+</record>
+15:41:44.835 INFO      Variable         Interpreting Variable id:expectTotal
+15:41:44.835 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:44.985 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:44.997 LOG       Expression       Expression evaluated to:1000.00
+15:41:44.997 LOG       Variable         Resolved data:
+1000.00
+15:41:44.998 INFO      Expression       Interpreting Expression:expectTotal
+15:41:45.138 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+expectTotal
+15:41:45.142 LOG       Expression       Expression evaluated to:1000.00
+15:41:45.142 COMMENT   Log              Expect Total:1000.00
+15:41:45.142 INFO      Expression       Interpreting Expression:loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:45.256 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:45.261 LOG       Expression       Expression evaluated to:1000.00
+15:41:45.261 COMMENT   Log              Actual Total:1000.00
+15:41:45.261 INFO      Verify           Interpreting Verify component name:Total
+15:41:45.261 INFO      Verify           Using verify expression:loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:45.356 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:45.361 LOG       Verify           Expression returned:
+true
+15:41:45.361 INFO      IterateData      Iteration number 2 started.
+15:41:45.361 LOG       IterateData      Iteration Data:
+<record xmlns="http://www.xact.dk/xatester/v/1">
+  <employee_dtl>
+    <filler1>' R'</filler1>
+    <emp_dtl_name>OY GARDNER</emp_dtl_name>
+    <filler2>N</filler2>
+    <emp_dtl_region>ORTH</emp_dtl_region>
+    <filler3>'  S'</filler3>
+    <emp_dtl_type></emp_dtl_type>
+    <filler4>'  1'</filler4>
+    <emp_dtl_hire_mm>0</emp_dtl_hire_mm>
+    <emp_dtl_slash1>3</emp_dtl_slash1>
+    <emp_dtl_hire_dd>0</emp_dtl_hire_dd>
+    <emp_dtl_slash2>9</emp_dtl_slash2>
+    <emp_dtl_hire_yy>0</emp_dtl_hire_yy>
+    <filler5>'  2'</filler5>
+    <emp_dtl_yrs_of_service>0</emp_dtl_yrs_of_service>
+    <filler6></filler6>
+    <emp_dtl_wages>750.00</emp_dtl_wages>
+    <filler7></filler7>
+    <emp_dtl_ot>0.00</emp_dtl_ot>
+    <filler8></filler8>
+    <emp_dtl_comm>3300.00</emp_dtl_comm>
+    <filler9></filler9>
+    <emp_dtl_total>4050.00</emp_dtl_total>
+  </employee_dtl>
+</record>
+15:41:45.361 INFO      Variable         Interpreting Variable id:expectTotal
+15:41:45.361 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:45.461 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:45.470 LOG       Expression       Expression evaluated to:4050.00
+15:41:45.470 LOG       Variable         Resolved data:
+4050.00
+15:41:45.470 INFO      Expression       Interpreting Expression:expectTotal
+15:41:45.565 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+expectTotal
+15:41:45.568 LOG       Expression       Expression evaluated to:4050.00
+15:41:45.568 COMMENT   Log              Expect Total:4050.00
+15:41:45.568 INFO      Expression       Interpreting Expression:loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:45.694 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:45.698 LOG       Expression       Expression evaluated to:4050.00
+15:41:45.698 COMMENT   Log              Actual Total:4050.00
+15:41:45.698 INFO      Verify           Interpreting Verify component name:Total
+15:41:45.698 INFO      Verify           Using verify expression:loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:45.779 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:45.784 LOG       Verify           Expression returned:
+true
+15:41:45.784 INFO      IterateData      Iteration number 3 started.
+15:41:45.784 LOG       IterateData      Iteration Data:
+<record xmlns="http://www.xact.dk/xatester/v/1">
+  <employee_dtl>
+    <filler1>' R'</filler1>
+    <emp_dtl_name>alph Nuesse</emp_dtl_name>
+    <filler2>S</filler2>
+    <emp_dtl_region>OUTH</emp_dtl_region>
+    <filler3>'  H'</filler3>
+    <emp_dtl_type></emp_dtl_type>
+    <filler4>'  0'</filler4>
+    <emp_dtl_hire_mm>0</emp_dtl_hire_mm>
+    <emp_dtl_slash1>2</emp_dtl_slash1>
+    <emp_dtl_hire_dd>0</emp_dtl_hire_dd>
+    <emp_dtl_slash2>8</emp_dtl_slash2>
+    <emp_dtl_hire_yy>0</emp_dtl_hire_yy>
+    <filler5>'  3'</filler5>
+    <emp_dtl_yrs_of_service>0</emp_dtl_yrs_of_service>
+    <filler6></filler6>
+    <emp_dtl_wages>1140.00</emp_dtl_wages>
+    <filler7></filler7>
+    <emp_dtl_ot>0.00</emp_dtl_ot>
+    <filler8></filler8>
+    <emp_dtl_comm>0.00</emp_dtl_comm>
+    <filler9></filler9>
+    <emp_dtl_total>1140.00</emp_dtl_total>
+  </employee_dtl>
+</record>
+15:41:45.784 INFO      Variable         Interpreting Variable id:expectTotal
+15:41:45.784 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:45.863 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:45.874 LOG       Expression       Expression evaluated to:1140.00
+15:41:45.875 LOG       Variable         Resolved data:
+1140.00
+15:41:45.875 INFO      Expression       Interpreting Expression:expectTotal
+15:41:45.988 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+expectTotal
+15:41:45.993 LOG       Expression       Expression evaluated to:1140.00
+15:41:45.993 COMMENT   Log              Expect Total:1140.00
+15:41:45.993 INFO      Expression       Interpreting Expression:loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:46.114 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:46.118 LOG       Expression       Expression evaluated to:1140.00
+15:41:46.118 COMMENT   Log              Actual Total:1140.00
+15:41:46.118 INFO      Verify           Interpreting Verify component name:Total
+15:41:46.119 INFO      Verify           Using verify expression:loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:46.215 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:46.218 LOG       Verify           Expression returned:
+true
+15:41:46.218 INFO      IterateData      Iteration number 4 started.
+15:41:46.219 LOG       IterateData      Iteration Data:
+<record xmlns="http://www.xact.dk/xatester/v/1">
+  <employee_dtl>
+    <filler1>' V'</filler1>
+    <emp_dtl_name>ALERIE OLSEN</emp_dtl_name>
+    <filler2>S</filler2>
+    <emp_dtl_region>OUTH</emp_dtl_region>
+    <filler3>'  S'</filler3>
+    <emp_dtl_type></emp_dtl_type>
+    <filler4>'  0'</filler4>
+    <emp_dtl_hire_mm>0</emp_dtl_hire_mm>
+    <emp_dtl_slash1>0</emp_dtl_slash1>
+    <emp_dtl_hire_dd>0</emp_dtl_hire_dd>
+    <emp_dtl_slash2>9</emp_dtl_slash2>
+    <emp_dtl_hire_yy>0</emp_dtl_hire_yy>
+    <filler5>'  2'</filler5>
+    <emp_dtl_yrs_of_service>0</emp_dtl_yrs_of_service>
+    <filler6></filler6>
+    <emp_dtl_wages>900.00</emp_dtl_wages>
+    <filler7></filler7>
+    <emp_dtl_ot>0.00</emp_dtl_ot>
+    <filler8></filler8>
+    <emp_dtl_comm>5600.00</emp_dtl_comm>
+    <filler9></filler9>
+    <emp_dtl_total>6500.00</emp_dtl_total>
+  </employee_dtl>
+</record>
+15:41:46.219 INFO      Variable         Interpreting Variable id:expectTotal
+15:41:46.219 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:46.323 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:46.333 LOG       Expression       Expression evaluated to:6500.00
+15:41:46.333 LOG       Variable         Resolved data:
+6500.00
+15:41:46.333 INFO      Expression       Interpreting Expression:expectTotal
+15:41:46.475 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+expectTotal
+15:41:46.479 LOG       Expression       Expression evaluated to:6500.00
+15:41:46.479 COMMENT   Log              Expect Total:6500.00
+15:41:46.479 INFO      Expression       Interpreting Expression:loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:46.569 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:46.571 LOG       Expression       Expression evaluated to:6500.00
+15:41:46.572 COMMENT   Log              Actual Total:6500.00
+15:41:46.572 INFO      Verify           Interpreting Verify component name:Total
+15:41:46.572 INFO      Verify           Using verify expression:loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:46.639 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:46.644 LOG       Verify           Expression returned:
+true
+15:41:46.645 INFO      IterateData      Iteration number 5 started.
+15:41:46.645 LOG       IterateData      Iteration Data:
+<record xmlns="http://www.xact.dk/xatester/v/1">
+  <employee_dtl>
+    <filler1>' M'</filler1>
+    <emp_dtl_name>ICHAEL DAYTON</emp_dtl_name>
+    <filler2>S</filler2>
+    <emp_dtl_region>OUTH</emp_dtl_region>
+    <filler3>'  S'</filler3>
+    <emp_dtl_type></emp_dtl_type>
+    <filler4>'  0'</filler4>
+    <emp_dtl_hire_mm>0</emp_dtl_hire_mm>
+    <emp_dtl_slash1>3</emp_dtl_slash1>
+    <emp_dtl_hire_dd>0</emp_dtl_hire_dd>
+    <emp_dtl_slash2>8</emp_dtl_slash2>
+    <emp_dtl_hire_yy>0</emp_dtl_hire_yy>
+    <filler5>'  3'</filler5>
+    <emp_dtl_yrs_of_service>0</emp_dtl_yrs_of_service>
+    <filler6></filler6>
+    <emp_dtl_wages>825.00</emp_dtl_wages>
+    <filler7></filler7>
+    <emp_dtl_ot>0.00</emp_dtl_ot>
+    <filler8></filler8>
+    <emp_dtl_comm>6000.00</emp_dtl_comm>
+    <filler9></filler9>
+    <emp_dtl_total>6825.00</emp_dtl_total>
+  </employee_dtl>
+</record>
+15:41:46.645 INFO      Variable         Interpreting Variable id:expectTotal
+15:41:46.645 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:46.715 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:46.723 LOG       Expression       Expression evaluated to:6825.00
+15:41:46.723 LOG       Variable         Resolved data:
+6825.00
+15:41:46.723 INFO      Expression       Interpreting Expression:expectTotal
+15:41:46.801 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+expectTotal
+15:41:46.809 LOG       Expression       Expression evaluated to:6825.00
+15:41:46.809 COMMENT   Log              Expect Total:6825.00
+15:41:46.809 INFO      Expression       Interpreting Expression:loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:46.905 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:46.909 LOG       Expression       Expression evaluated to:6825.00
+15:41:46.910 COMMENT   Log              Actual Total:6825.00
+15:41:46.910 INFO      Verify           Interpreting Verify component name:Total
+15:41:46.910 INFO      Verify           Using verify expression:loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:46.971 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:46.976 LOG       Verify           Expression returned:
+true
+15:41:46.976 INFO      IterateData      Iteration number 6 started.
+15:41:46.976 LOG       IterateData      Iteration Data:
+<record xmlns="http://www.xact.dk/xatester/v/1">
+  <employee_dtl>
+    <filler1>' D'</filler1>
+    <emp_dtl_name>ENNIS WHITE</emp_dtl_name>
+    <filler2>S</filler2>
+    <emp_dtl_region>OUTH</emp_dtl_region>
+    <filler3>'  S'</filler3>
+    <emp_dtl_type></emp_dtl_type>
+    <filler4>'  0'</filler4>
+    <emp_dtl_hire_mm>0</emp_dtl_hire_mm>
+    <emp_dtl_slash1>2</emp_dtl_slash1>
+    <emp_dtl_hire_dd>0</emp_dtl_hire_dd>
+    <emp_dtl_slash2>8</emp_dtl_slash2>
+    <emp_dtl_hire_yy>0</emp_dtl_hire_yy>
+    <filler5>'  3'</filler5>
+    <emp_dtl_yrs_of_service>0</emp_dtl_yrs_of_service>
+    <filler6></filler6>
+    <emp_dtl_wages>1050.00</emp_dtl_wages>
+    <filler7></filler7>
+    <emp_dtl_ot>0.00</emp_dtl_ot>
+    <filler8></filler8>
+    <emp_dtl_comm>1120.00</emp_dtl_comm>
+    <filler9></filler9>
+    <emp_dtl_total>2170.00</emp_dtl_total>
+  </employee_dtl>
+</record>
+15:41:46.977 INFO      Variable         Interpreting Variable id:expectTotal
+15:41:46.977 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:47.044 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:47.051 LOG       Expression       Expression evaluated to:2170.00
+15:41:47.051 LOG       Variable         Resolved data:
+2170.00
+15:41:47.051 INFO      Expression       Interpreting Expression:expectTotal
+15:41:47.123 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+expectTotal
+15:41:47.127 LOG       Expression       Expression evaluated to:2170.00
+15:41:47.127 COMMENT   Log              Expect Total:2170.00
+15:41:47.127 INFO      Expression       Interpreting Expression:loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:47.205 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:47.209 LOG       Expression       Expression evaluated to:2170.00
+15:41:47.209 COMMENT   Log              Actual Total:2170.00
+15:41:47.209 INFO      Verify           Interpreting Verify component name:Total
+15:41:47.209 INFO      Verify           Using verify expression:loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:47.301 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:47.307 LOG       Verify           Expression returned:
+true
+15:41:47.308 INFO      IterateData      Iteration number 7 started.
+15:41:47.308 LOG       IterateData      Iteration Data:
+<record xmlns="http://www.xact.dk/xatester/v/1">
+  <employee_dtl>
+    <filler1>' D'</filler1>
+    <emp_dtl_name>AN PEARSON</emp_dtl_name>
+    <filler2>E</filler2>
+    <emp_dtl_region>AST</emp_dtl_region>
+    <filler3>'  S'</filler3>
+    <emp_dtl_type></emp_dtl_type>
+    <filler4>'  0'</filler4>
+    <emp_dtl_hire_mm>0</emp_dtl_hire_mm>
+    <emp_dtl_slash1>2</emp_dtl_slash1>
+    <emp_dtl_hire_dd>0</emp_dtl_hire_dd>
+    <emp_dtl_slash2>8</emp_dtl_slash2>
+    <emp_dtl_hire_yy>0</emp_dtl_hire_yy>
+    <filler5>'  3'</filler5>
+    <emp_dtl_yrs_of_service>0</emp_dtl_yrs_of_service>
+    <filler6></filler6>
+    <emp_dtl_wages>850.00</emp_dtl_wages>
+    <filler7></filler7>
+    <emp_dtl_ot>0.00</emp_dtl_ot>
+    <filler8></filler8>
+    <emp_dtl_comm>1000.00</emp_dtl_comm>
+    <filler9></filler9>
+    <emp_dtl_total>1850.00</emp_dtl_total>
+  </employee_dtl>
+</record>
+15:41:47.308 INFO      Variable         Interpreting Variable id:expectTotal
+15:41:47.308 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:47.372 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:47.380 LOG       Expression       Expression evaluated to:1850.00
+15:41:47.381 LOG       Variable         Resolved data:
+1850.00
+15:41:47.381 INFO      Expression       Interpreting Expression:expectTotal
+15:41:47.451 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+expectTotal
+15:41:47.455 LOG       Expression       Expression evaluated to:1850.00
+15:41:47.455 COMMENT   Log              Expect Total:1850.00
+15:41:47.456 INFO      Expression       Interpreting Expression:loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:47.528 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:47.531 LOG       Expression       Expression evaluated to:1850.00
+15:41:47.531 COMMENT   Log              Actual Total:1850.00
+15:41:47.531 INFO      Verify           Interpreting Verify component name:Total
+15:41:47.531 INFO      Verify           Using verify expression:loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:47.598 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:47.602 LOG       Verify           Expression returned:
+true
+15:41:47.602 INFO      IterateData      Iteration number 8 started.
+15:41:47.603 LOG       IterateData      Iteration Data:
+<record xmlns="http://www.xact.dk/xatester/v/1">
+  <employee_dtl>
+    <filler1>' T'</filler1>
+    <emp_dtl_name>HOMAS LONG</emp_dtl_name>
+    <filler2>W</filler2>
+    <emp_dtl_region>EST</emp_dtl_region>
+    <filler3>'  H'</filler3>
+    <emp_dtl_type></emp_dtl_type>
+    <filler4>'  0'</filler4>
+    <emp_dtl_hire_mm>0</emp_dtl_hire_mm>
+    <emp_dtl_slash1>3</emp_dtl_slash1>
+    <emp_dtl_hire_dd>0</emp_dtl_hire_dd>
+    <emp_dtl_slash2>8</emp_dtl_slash2>
+    <emp_dtl_hire_yy>0</emp_dtl_hire_yy>
+    <filler5>'  3'</filler5>
+    <emp_dtl_yrs_of_service>0</emp_dtl_yrs_of_service>
+    <filler6></filler6>
+    <emp_dtl_wages>1000.00</emp_dtl_wages>
+    <filler7></filler7>
+    <emp_dtl_ot>187.50</emp_dtl_ot>
+    <filler8></filler8>
+    <emp_dtl_comm>0.00</emp_dtl_comm>
+    <filler9></filler9>
+    <emp_dtl_total>1187.50</emp_dtl_total>
+  </employee_dtl>
+</record>
+15:41:47.603 INFO      Variable         Interpreting Variable id:expectTotal
+15:41:47.603 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:47.657 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:47.670 LOG       Expression       Expression evaluated to:1187.50
+15:41:47.670 LOG       Variable         Resolved data:
+1187.50
+15:41:47.670 INFO      Expression       Interpreting Expression:expectTotal
+15:41:47.721 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+expectTotal
+15:41:47.725 LOG       Expression       Expression evaluated to:1187.50
+15:41:47.725 COMMENT   Log              Expect Total:1187.50
+15:41:47.725 INFO      Expression       Interpreting Expression:loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:47.769 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:47.771 LOG       Expression       Expression evaluated to:1187.50
+15:41:47.771 COMMENT   Log              Actual Total:1187.50
+15:41:47.771 INFO      Verify           Interpreting Verify component name:Total
+15:41:47.771 INFO      Verify           Using verify expression:loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:47.818 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:47.821 LOG       Verify           Expression returned:
+true
+15:41:47.821 INFO      IterateData      Iteration number 9 started.
+15:41:47.821 LOG       IterateData      Iteration Data:
+<record xmlns="http://www.xact.dk/xatester/v/1">
+  <employee_dtl>
+    <filler1>' L'</filler1>
+    <emp_dtl_name>AURA MARTIN</emp_dtl_name>
+    <filler2>W</filler2>
+    <emp_dtl_region>EST</emp_dtl_region>
+    <filler3>'  S'</filler3>
+    <emp_dtl_type></emp_dtl_type>
+    <filler4>'  0'</filler4>
+    <emp_dtl_hire_mm>0</emp_dtl_hire_mm>
+    <emp_dtl_slash1>1</emp_dtl_slash1>
+    <emp_dtl_hire_dd>0</emp_dtl_hire_dd>
+    <emp_dtl_slash2>8</emp_dtl_slash2>
+    <emp_dtl_hire_yy>0</emp_dtl_hire_yy>
+    <filler5>'  3'</filler5>
+    <emp_dtl_yrs_of_service>0</emp_dtl_yrs_of_service>
+    <filler6></filler6>
+    <emp_dtl_wages>1225.00</emp_dtl_wages>
+    <filler7></filler7>
+    <emp_dtl_ot>0.00</emp_dtl_ot>
+    <filler8></filler8>
+    <emp_dtl_comm>6000.00</emp_dtl_comm>
+    <filler9></filler9>
+    <emp_dtl_total>7225.00</emp_dtl_total>
+  </employee_dtl>
+</record>
+15:41:47.821 INFO      Variable         Interpreting Variable id:expectTotal
+15:41:47.821 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:47.875 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:47.881 LOG       Expression       Expression evaluated to:7225.00
+15:41:47.881 LOG       Variable         Resolved data:
+7225.00
+15:41:47.881 INFO      Expression       Interpreting Expression:expectTotal
+15:41:47.932 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+expectTotal
+15:41:47.934 LOG       Expression       Expression evaluated to:7225.00
+15:41:47.934 COMMENT   Log              Expect Total:7225.00
+15:41:47.935 INFO      Expression       Interpreting Expression:loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:48.027 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:48.031 LOG       Expression       Expression evaluated to:7225.00
+15:41:48.031 COMMENT   Log              Actual Total:7225.00
+15:41:48.031 INFO      Verify           Interpreting Verify component name:Total
+15:41:48.031 INFO      Verify           Using verify expression:loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:48.111 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:48.116 LOG       Verify           Expression returned:
+true
+15:41:48.117 INFO      IterateData      Iteration number 10 started.
+15:41:48.117 LOG       IterateData      Iteration Data:
+<record xmlns="http://www.xact.dk/xatester/v/1">
+  <employee_dtl>
+    <filler1>' D'</filler1>
+    <emp_dtl_name>ONNA BROWN</emp_dtl_name>
+    <filler2>W</filler2>
+    <emp_dtl_region>EST</emp_dtl_region>
+    <filler3>'  S'</filler3>
+    <emp_dtl_type></emp_dtl_type>
+    <filler4>'  1'</filler4>
+    <emp_dtl_hire_mm>0</emp_dtl_hire_mm>
+    <emp_dtl_slash1>1</emp_dtl_slash1>
+    <emp_dtl_hire_dd>0</emp_dtl_hire_dd>
+    <emp_dtl_slash2>8</emp_dtl_slash2>
+    <emp_dtl_hire_yy>0</emp_dtl_hire_yy>
+    <filler5>'  3'</filler5>
+    <emp_dtl_yrs_of_service>0</emp_dtl_yrs_of_service>
+    <filler6></filler6>
+    <emp_dtl_wages>1000.00</emp_dtl_wages>
+    <filler7></filler7>
+    <emp_dtl_ot>0.00</emp_dtl_ot>
+    <filler8></filler8>
+    <emp_dtl_comm>3333.00</emp_dtl_comm>
+    <filler9></filler9>
+    <emp_dtl_total>4333.00</emp_dtl_total>
+  </employee_dtl>
+</record>
+15:41:48.117 INFO      Variable         Interpreting Variable id:expectTotal
+15:41:48.117 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:48.167 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:48.171 LOG       Expression       Expression evaluated to:4333.00
+15:41:48.171 LOG       Variable         Resolved data:
+4333.00
+15:41:48.171 INFO      Expression       Interpreting Expression:expectTotal
+15:41:48.224 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+expectTotal
+15:41:48.227 LOG       Expression       Expression evaluated to:4333.00
+15:41:48.227 COMMENT   Log              Expect Total:4333.00
+15:41:48.227 INFO      Expression       Interpreting Expression:loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:48.290 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:48.293 LOG       Expression       Expression evaluated to:4333.00
+15:41:48.293 COMMENT   Log              Actual Total:4333.00
+15:41:48.293 INFO      Verify           Interpreting Verify component name:Total
+15:41:48.293 INFO      Verify           Using verify expression:loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:48.343 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:48.345 LOG       Verify           Expression returned:
+true
+15:41:48.346 INFO      IterateData      Iteration number 11 started.
+15:41:48.346 LOG       IterateData      Iteration Data:
+<record xmlns="http://www.xact.dk/xatester/v/1">
+  <employee_dtl>
+    <filler1>' M'</filler1>
+    <emp_dtl_name>ARK JOHNSON</emp_dtl_name>
+    <filler2>W</filler2>
+    <emp_dtl_region>EST</emp_dtl_region>
+    <filler3>'  S'</filler3>
+    <emp_dtl_type></emp_dtl_type>
+    <filler4>'  0'</filler4>
+    <emp_dtl_hire_mm>0</emp_dtl_hire_mm>
+    <emp_dtl_slash1>3</emp_dtl_slash1>
+    <emp_dtl_hire_dd>0</emp_dtl_hire_dd>
+    <emp_dtl_slash2>8</emp_dtl_slash2>
+    <emp_dtl_hire_yy>0</emp_dtl_hire_yy>
+    <filler5>'  3'</filler5>
+    <emp_dtl_yrs_of_service>0</emp_dtl_yrs_of_service>
+    <filler6></filler6>
+    <emp_dtl_wages>750.00</emp_dtl_wages>
+    <filler7></filler7>
+    <emp_dtl_ot>0.00</emp_dtl_ot>
+    <filler8></filler8>
+    <emp_dtl_comm>6000.00</emp_dtl_comm>
+    <filler9></filler9>
+    <emp_dtl_total>6750.00</emp_dtl_total>
+  </employee_dtl>
+</record>
+15:41:48.346 INFO      Variable         Interpreting Variable id:expectTotal
+15:41:48.346 INFO      Expression       Interpreting Expression:var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:48.387 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+var tmpWages = Number(loopThroughOutput.record.employee_dtl.emp_dtl_wages)
+var tmpOt    = Number(loopThroughOutput.record.employee_dtl.emp_dtl_ot)
+var tmpComm  = Number(loopThroughOutput.record.employee_dtl.emp_dtl_comm)
+var tmpTotal = tmpWages + tmpOt + tmpComm
+
+tmpTotal.toFixed(2)
+15:41:48.391 LOG       Expression       Expression evaluated to:6750.00
+15:41:48.391 LOG       Variable         Resolved data:
+6750.00
+15:41:48.392 INFO      Expression       Interpreting Expression:expectTotal
+15:41:48.436 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+expectTotal
+15:41:48.439 LOG       Expression       Expression evaluated to:6750.00
+15:41:48.439 COMMENT   Log              Expect Total:6750.00
+15:41:48.439 INFO      Expression       Interpreting Expression:loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:48.485 LOG       Expression       Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total
+15:41:48.487 LOG       Expression       Expression evaluated to:6750.00
+15:41:48.487 COMMENT   Log              Actual Total:6750.00
+15:41:48.487 INFO      Verify           Interpreting Verify component name:Total
+15:41:48.487 INFO      Verify           Using verify expression:loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:48.532 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
+loopThroughOutput.record.employee_dtl.emp_dtl_total == expectTotal
+15:41:48.535 LOG       Verify           Expression returned:
+true
+15:41:48.535 INFO      IterateData      IterateData completed
+15:41:48.535 INFO      VerifyRemoteFile Interpreting VerifyRemoteFile in COMPARE mode. Dataset to verify: ${outDatasetNameActual}
+15:41:48.536 INFO      VerifyRemoteFile   Variable substitution found in actual dataset name
+15:41:48.536 INFO      VerifyRemoteFile   Actual dataset name is now:HDDRXM0.DEMO.TTTFT.CWXTRPT.EOM
+15:41:48.536 INFO      VerifyRemoteFile   Variable substitution found in expected dataset name
+15:41:48.537 INFO      VerifyRemoteFile   Expected dataset name is now:HDDRXM0.DEMO.TTTFT.CWXTRPT.EOM.EXPECT
+15:41:48.540 LOG       VerifyRemoteFile Adding compare rule to exclude from pos: 12 to 13
+15:41:48.540 LOG       VerifyRemoteFile Adding compare rule to exclude from pos: 15 to 16
+15:41:48.540 LOG       VerifyRemoteFile Adding compare rule to exclude from pos: 18 to 19
+15:41:48.542 INFO      CWCC Batch       Sending Job execution request to Host 
+15:41:49.323 INFO      HCIClient        Creating job directory /u/xatester/hddrxm0/ce48a499e2e9409c9580e63bc794461e
+15:41:49.907 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>HDDRXM0</userid><xpassword>XXX</xpassword><operation>COMPARE</operation><runat>DAY</runat><jobdirectory>ce48a499e2e9409c9580e63bc794461e</jobdirectory><outputfilepath>output.xml</outputfilepath><snapshot><compare><olddsn>HDDRXM0.DEMO.TTTFT.CWXTRPT.EOM.EXPECT</olddsn><newdsn>HDDRXM0.DEMO.TTTFT.CWXTRPT.EOM</newdsn><compareopts><compareopt>excflds=13,2,16,2,19,2</compareopt></compareopts></compare></snapshot></xatz_request></XATZREQ>
+15:41:50.478 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0784672</jobid><jobname>HDDRXM0S</jobname><starttime>20190918094150470</starttime></xatz_response></XATZRESP>
+15:41:50.478 LOG       HCIClient        Response received from Host. Message: JobId:J0784672
+15:41:50.478 INFO      HCIClient        Job has been started at host with JobId:J0784672
+15:41:50.478 INFO      CWCC Batch       Waiting for Execution Result from Host
+15:41:53.657 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>HDDRXM0</userid><xpassword>XXX</xpassword><operation>JOBINFO</operation><runat>DAY</runat><jobid>J0784672</jobid></xatz_request></XATZREQ>
+15:41:53.963 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0000</resultcode><resultmessage>Job information successfully returned</resultmessage><jobid /><responsedata><job><name>HDDRXM0S</name><status>ACTIVE</status><returncode>           </returncode><steps></steps></job></responsedata></xatz_response></XATZRESP>
+15:41:53.964 LOG       HCIClient        Response received from Host. Message:Job information successfully returned JobId:
+15:41:57.264 LOG       VerifyRemoteFile Notification message contained a Verification Error, now retrieving compare files with content
+15:41:57.264 ERROR     VerifyRemoteFile Comparison of DSN expected:HDDRXM0.DEMO.TTTFT.CWXTRPT.EOM.EXPECT actual:HDDRXM0.DEMO.TTTFT.CWXTRPT.EOM was FAIL
+15:41:57.264 LOG       VerifyRemoteFile Getting information about the comparison from file:output.xml.cmpr12
+15:41:57.264 LOG       VerifyRemoteFile Retrieving file:output.xml.cmpr12
+15:41:57.453 ERROR     VerifyRemoteFile Expected and Actual files/datasets are NOT equal
+15:41:57.455 ERROR     VerifyRemoteFile Actual and expected datasets are not equal. Differences found in one or more records between actual dataset: HDDRXM0.DEMO.TTTFT.CWXTRPT.EOM and expected dataset:HDDRXM0.DEMO.TTTFT.CWXTRPT.EOM.EXPECT
+15:41:57.455 INFO      Scope            Scope completed
+15:41:57.455 COMMENT   Engine           Test Scenario execution ended

@@ -1,0 +1,41 @@
+15:20:43.752 INFO      TOPAZ            ***************************************
+15:20:43.752 INFO      TOPAZ            ** Execution from Topaz with options **
+15:20:43.752 INFO      TOPAZ            ***************************************
+15:20:43.752 INFO      TOPAZ            Using repository: false
+15:20:43.752 INFO      TOPAZ            ***************************************
+15:20:43.752 INFO      Engine           Test Scenario execution started
+15:20:43.752 INFO      Engine           Using context settings:
+  Engine Version                : 20.5
+  Environment id                : 192.168.96.130:16196
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : 192.168.96.130
+  Server port                   : 16196
+  Job execution timeout seconds : 300
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : HDDRXM0
+  Use Repository Server         : false
+15:20:43.752 INFO      Engine           Setting variables from context and context data extensions
+15:20:43.752 INFO      Engine             id: environmentId      value: 192.168.96.130:16196
+15:20:43.752 INFO      Engine             id: environmentType    value: BATCH
+15:20:43.753 INFO      Engine             id: userId             value: HDDRXM0
+15:20:43.753 INFO      Engine             id: accountingInfo     value: 
+15:20:43.753 INFO      Unittest         Interpreting Unittest of module: CWXTCOB.testsuite testscenario path: CWXTCOB.testsuite
+15:20:43.758 INFO      Unittest         Using JCL skeleton to submit JCL
+15:22:15.300 INFO      CWCC             Sending Job execution request to Host 
+15:22:25.752 INFO      CWCC             Job execution completed with status:
+  Job status     : COMPLETED
+  Job status msg : Job HDDRXM0A(J0105687) ended with return code: 0000
+  Job name       : HDDRXM0A
+  Job id         : J0105687
+  Return code    : 0000
+  Abend code     : 
+  Abend reason   : 
+15:22:37.337 ERROR     Unittest         Unable to process TTTRunner output for the component 'CWXTCOB.testsuite'. Reason: com.compuware.unittest.eclipse.common.TotalTestException: Project C:\Users\rnuesse\Compuware\Workbench\workspace_Git2Ispw\General_Insurance_App\InsuranceCore\Tests\Unit\SalesRepManagement\Payroll\CWXTCOB requires an upgrade, but does not contain the required resources for the upgrade.com.compuware.unittest.eclipse.common.TotalTestException: Project C:\Users\rnuesse\Compuware\Workbench\workspace_Git2Ispw\General_Insurance_App\InsuranceCore\Tests\Unit\SalesRepManagement\Payroll\CWXTCOB requires an upgrade, but does not contain the required resources for the upgrade.com.compuware.unittest.cli.common.TotalTestCLIException: com.compuware.unittest.eclipse.common.TotalTestException: Project C:\Users\rnuesse\Compuware\Workbench\workspace_Git2Ispw\General_Insurance_App\InsuranceCore\Tests\Unit\SalesRepManagement\Payroll\CWXTCOB requires an upgrade, but does not contain the required resources for the upgrade.
+15:22:37.337 ERROR     Engine           Unable to process TTTRunner output for the component 'CWXTCOB.testsuite'. Reason: com.compuware.unittest.eclipse.common.TotalTestException: Project C:\Users\rnuesse\Compuware\Workbench\workspace_Git2Ispw\General_Insurance_App\InsuranceCore\Tests\Unit\SalesRepManagement\Payroll\CWXTCOB requires an upgrade, but does not contain the required resources for the upgrade.
+15:22:37.338 ERROR     Engine           An error occurred. Now stopping the execution.
+15:22:37.339 INFO      Engine           Test Scenario execution ended

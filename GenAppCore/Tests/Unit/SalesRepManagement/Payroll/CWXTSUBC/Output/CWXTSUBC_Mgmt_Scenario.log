@@ -1,0 +1,43 @@
+16:19:40.923 INFO      TOPAZ            ***************************************
+16:19:40.924 INFO      TOPAZ            ** Execution from Topaz with options **
+16:19:40.924 INFO      TOPAZ            ***************************************
+16:19:40.924 INFO      TOPAZ            Using repository: true
+16:19:40.925 INFO      TOPAZ            Repository URL: http://cwcc.compuware.com:2020/totaltestapi/
+16:19:40.925 INFO      TOPAZ            ***************************************
+16:19:40.929 INFO      Engine           Test Scenario execution started
+16:19:40.931 INFO      Engine           Using context settings:
+  Engine Version                : 20.5
+  Environment id                : 5b508b8a787be73b59238d38
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : cwcc.nasa.cpwr.corp
+  Server port                   : 16196
+  Job execution timeout seconds : 600
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : HDDRXM0
+  Use Repository Server         : false
+16:19:40.931 INFO      Engine           Setting variables from context and context data extensions
+16:19:40.931 INFO      Engine             id: environmentId      value: 5b508b8a787be73b59238d38
+16:19:40.931 INFO      Engine             id: environmentType    value: BATCH
+16:19:40.931 INFO      Engine             id: userId             value: HDDRXM0
+16:19:40.931 INFO      Engine             id: accountingInfo     value: 
+16:19:40.932 INFO      Engine             id: ispw_level         value: ${ispw_level_value}
+16:19:40.932 INFO      Engine             id: ispw_app           value: ${ispw_app_value}
+16:19:40.933 INFO      Unittest         Interpreting Unittest of module: CWXTSUBC testscenario path: CWXTSUBC_Mgmt_Scenario.testscenario
+16:19:41.206 INFO      Unittest         Using JCL skeleton to submit JCL
+16:19:56.698 INFO      CWCC Batch       Sending Job execution request to Host 
+16:19:57.171 INFO      CWCC Batch       Job execution completed with status:
+  Job status     : JCLERROR
+  Job status msg : Job JOBNAME(J0108228) ended with JCL error, check JES output.
+  Job name       : JOBNAME
+  Job id         : J0108228
+  Return code    : JCL ERROR
+  Abend code     : 
+  Abend reason   : 
+16:19:58.072 ERROR     Engine           Unable to execute the job definition at the host. Job stopped with JCL error
+16:19:58.073 ERROR     Engine           An error occurred. Now stopping the execution.
+16:19:58.073 INFO      Engine           Test Scenario execution ended
