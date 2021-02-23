@@ -4,7 +4,7 @@ ispwApplication:
   port: 16196
   runtimeConfig: ispw
   stream: GITDEMO1
-  application: ${ispw_app}
+  application: GITD
   pathMappings:
   - path: "**/Sources/**"
     types:
