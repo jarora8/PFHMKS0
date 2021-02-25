@@ -10,6 +10,7 @@ ispwApplication:
     types:
     - fileExtension: cbl
       ispwType: COB
+      progType: 'Yes'
   - path: "**/Sources/**"
     types:
     - fileExtension: cpy
@@ -26,3 +27,4 @@ ispwApplication:
     types:
     - fileExtension: pli
       ispwType: PLI
+      progType: 'Yes'
