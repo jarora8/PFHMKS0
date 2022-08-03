@@ -13,6 +13,12 @@ ispwApplication:
       progType: 'Yes'
   - path: "**/Sources/**"
     types:
+    - fileExtension: ccb
+      cics: 'Yes'
+      ispwType: COB
+      progType: 'Yes'
+  - path: "**/Sources/**"
+    types:
     - fileExtension: cpy
       ispwType: COPY
   - path: "**/Sources/**"
