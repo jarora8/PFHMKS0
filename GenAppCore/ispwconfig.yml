@@ -8,6 +8,12 @@ ispwApplication:
   pathMappings:
   - path: "**/Sources/**"
     types:
+    - cics: 'Yes'
+      fileExtension: ccb
+      ispwType: COB
+      progType: 'Yes'
+  - path: "**/Sources/**"
+    types:
     - fileExtension: cbl
       ispwType: COB
       progType: 'Yes'
