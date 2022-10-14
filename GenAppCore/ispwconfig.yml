@@ -1,6 +1,6 @@
 !!com.compuware.ispw.wzzms.models.IspwRoot
 ispwApplication:
-  host: cwcc.compuware.com
+  host: cwcc.bmc.com
   port: 16196
   runtimeConfig: ispw
   stream: GITDEMO1
