@@ -1,10 +1,10 @@
 !!com.compuware.ispw.wzzms.models.IspwRoot
 ispwApplication:
-  host: cwcc.bmc.com
-  port: 16196
-  runtimeConfig: ispw
-  stream: GITDEMO1
-  application: GITD
+  host: cw09.compuware.com  
+  port: 47623
+  runtimeConfig: TPZP
+  stream: topaz
+  application: KATE
   pathMappings:
   - path: "**/Sources/**"
     types:
