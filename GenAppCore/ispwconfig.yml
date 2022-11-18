@@ -3,8 +3,8 @@ ispwApplication:
   host: cw09.compuware.com  
   port: 47623
   runtimeConfig: TPZP
-  stream: topaz
-  application: KATE
+  stream: PLAY
+  application: PLAY
   pathMappings:
   - path: "**/Sources/**"
     types:
