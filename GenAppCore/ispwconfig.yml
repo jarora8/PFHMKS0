@@ -9,7 +9,7 @@ ispwApplication:
   - path: "**/Sources/**"
     types:
     - cics: 'Yes'
-      fileExtension: ccb
+      fileExtension: cob
       ispwType: COB
       progType: 'Yes'
   - path: "**/Sources/**"
