@@ -1,7 +1,7 @@
        IDENTIFICATION DIVISION.
        PROGRAM-ID.  CWKTDATE.
       ******************************************************************
-      *            Testing Jalaj6                                      *
+      *            Testing Jalaj update 1                              *
       ******      C O M P U W A R E   C O R P O R A T I O N       ******
       *                                                                *
       *  THIS CALLED PROGRAM IS PART OF THE COBOL DEMO PROGRAM USED    *
